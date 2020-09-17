@@ -1,42 +1,34 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-
-int main(int argc, char const *argv[])
-{
-	/*déclaration des variables*/
-	int entier;
-	int a=0; /*variable qui multiplie*/
-	int resultat; /* variable résultat d'une multiplication*/
+int main(int argc, char * argv[]){
 	
 
-	/*données rentrées par l'utilisateur*/
-	printf("entrez un entier pour avoir sa table de multiplication :\n");
-	scanf("%d", &entier);
+	int i,result,a,x;
 
 
-
-	while(entier!=-1){
-
-	/*boucle qui répète la multiplication*/
+	while(a != -1){	
 		
-			while(a<10){
-			a++;
-			resultat=entier*a;
-				/* affichage du résultat*/
-				printf("%d x %d = %d\n", entier, a, resultat );
+
+		printf("Ecrivez un entier (pour arreter entrez -1): ");
+		
+		result = scanf("%d",&a);
+
+
+
+		if(result != 1){
+			printf("failure \n");
+			return EXIT_FAILURE;
+		}
+
+
+		if(a != -1){
+			for(i = 1;i<= 10;i++){
+				x=i*a;
+				printf("%d x %2d = %d\n",a,i,x);
 			}
-		
-		// do {
-			printf("entrez un entier pour avoir sa table de multiplication :\n");
-		scanf("%d", &entier);
-	// } while(entier!=-1);
- 
-	} 
-
-
-		
-
-
+		}	
+	}
 	return EXIT_SUCCESS;
 }
+
