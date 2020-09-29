@@ -1,9 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
-
 int main(int argc, char const *argv[])
-
 {
 int result, choix, hauteur, i, j, k;
 
@@ -37,7 +34,6 @@ if (choix == 2){
   
     for (i=0; i<hauteur; i++){
         printf("* ");
-
     }
     printf("\n");
        
@@ -55,11 +51,8 @@ if (choix == 2){
     printf("\n");
     for (i=0; i<hauteur; i++){
         printf("* ");
-
     }
 }
-
 }
-
 return EXIT_SUCCESS;
 }
