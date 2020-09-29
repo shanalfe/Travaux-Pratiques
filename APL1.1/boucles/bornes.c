@@ -2,32 +2,44 @@
 #include<stdlib.h>
 
 
-int main(int argc, char const *argv[])
-{
-	/* déclaration des variables*/
-	int x; /* nombres que l'utilisateur rentre*/
-	int tab[100]; /*tableau*/
-	int i; 
+int main(){
 
-	/*boucle qui prend les nombres */
-	// while(x!=-1){
-		printf("entrez des entiers, et -1 pour arrêter la saisie\n");
-		scanf("%d", &tab[i]);
-	
+    int a;
+    int result = 0 , petit, grand;
 
-		/*boucle qui stock les nombres*/
-		for(i=1; i<x; ++i){
-			if(tab[0]> tab[i]){
-				tab[0]= tab[i];
-			}
+    printf("Entrez un premier entier naturel, \"-1\" pour stopper le programme. \n");
+    result = scanf("%d", &a);
 
-			printf("Le plus petit élément est %d\n", tab[i] );
-		}
+    //condition booleen
+    if (result != 1){
+        printf("Fin du programme.");
+        return EXIT_FAILURE;
+    }
+
+    //initialisation
+    petit = grand = a;
+
+    while (a != -1){
+        printf("Entrez un entier \n");
+        result =  scanf("%d", &a);
+
+            if (result != 1 ){
+                return EXIT_FAILURE;
+            }
+
+            if(a != -1){
+                if ( a > grand ){
+
+                    grand = a;
+                }
+
+                if ( a < petit ){
+                    petit = a;
+                }
+            }
+    }
+     printf("Le plus petit entier naturel est %d et le plus grand entier naturel est %d", petit, grand);
 
 
-	// }
-
-
-	
-	return 0;
+    return EXIT_SUCCESS;
 }
