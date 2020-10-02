@@ -1,35 +1,27 @@
-#include<stdio.h>
-#include<stdlib.h>
-#include <time.h>
+#include <stdio.h>
+#include <stdlib.h>
 
-int main(int argc, char * argv[]){
+int main(){
+   int q = 0, i, n;
+   
+   printf(" Entrez un nombre: ");
+   scanf("%d", &n);
+   
+   for(i=1; i<=n; i++){
+      if(n%i==0) {
+         q++;
+      }
+   }
 
+   if(q==2){
+      printf(" %d est un nombre premier.\n",n);
+   }else{
+      printf(" %d n'est pas un nombre premier.\n",n);
+   }
 
-	int n;
-	srand(time(NULL));
-	int rep = rand()%101;
-
-
-
-	printf("Entrez un nombre, vous avez 5 chances : \n");
-	
-	
-	for ( int i=0; i<=4; i++){
-	scanf("%d", &n);	
-		if(n>rep) {
-				printf("-\n");
-
-	}if(n<rep) {
-		printf("+\n");
-
-	}
-	if (n== rep){
-		printf("Vous avez gagnez!!! \n");
-	}	
-	}
-
-	return EXIT_SUCCESS;
-
-
-
+return EXIT_SUCCESS;
 }
+
+
+
+

@@ -14,10 +14,8 @@ int main(int argc, char const *argv[])
 
 
 	printf("Bonjour, trouver un nombre entre 0 et 100, vous avez 5 tentatives\n" );
-	//printf("%d\n",nbre );
-	/* données rentreés par l'utilisateur*/	
-	
-	//boucle
+
+
 	for(chance=0; chance <5; chance ++){
 		
 	/* nombre aléatoire*/

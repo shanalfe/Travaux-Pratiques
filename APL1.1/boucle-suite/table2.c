@@ -16,7 +16,6 @@ int main(int argc, char * argv[]){
 
 	printf("  X  |");
 
-
 	//affichage horizontal
 	for(i=0;i<=size;i++){
 		printf("%5d",i); // le 5 permet l'espacement entre
@@ -43,7 +42,6 @@ int main(int argc, char * argv[]){
 		
 		printf("\n");
 	}
-
 
 	return EXIT_SUCCESS;
 }
