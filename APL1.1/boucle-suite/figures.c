@@ -34,7 +34,7 @@ int main(int argc, char const *argv[]){
 		v4 = (i*i);
 	}
 	n = n - v4;
-	printf(" %d ", v4);
+	printf(" %d \n", v4);
 
 
 
