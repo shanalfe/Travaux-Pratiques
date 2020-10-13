@@ -13,9 +13,9 @@ int main(int argc, char const *argv[]){
 
 			for (i=0;i<3; i++){
 
-				a = rand()%7;
-				b = rand()%7;
-				c = rand()%7;
+				a = rand()%(7-2)+1;
+				b = rand()%(7-2)+1;
+				c = rand()%(7-2)+1;
 				//a=2;b=4;c=1;
 
 				printf("[%d] [%d] [%d] \n",a,b,c );
