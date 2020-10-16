@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -5,7 +6,7 @@
 int main(int argc, char const *argv[]){
 
 	srand(time(NULL));
-	int a, b, c, i = 0, choix, result, d;
+	int a, b, c, i = 0, choix, result;
 
 	printf("Bienvenue au jeu 421 \n");
 
@@ -21,9 +22,9 @@ int main(int argc, char const *argv[]){
 				printf("[%d] [%d] [%d] \n",a,b,c );
 				printf("Relancer ? (1/0)\n");
 				result = scanf("%d", &choix);
-				d= a + b + c;
 				
-					if(d==7){
+				
+					if( ((a==4)||(a==1)||(a==2)) && ( (b==4)||(b==1)||(b==2) ) && ((c==4)||(c==1)||(c==2)) ){
 						printf("Bravo, tu as gagné !!\n");
 						return EXIT_FAILURE;		
 			}		
