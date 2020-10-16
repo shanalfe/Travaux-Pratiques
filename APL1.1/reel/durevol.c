@@ -13,7 +13,6 @@ scanf("%lf", &va);
 printf("Vitesse du vent : ");
 scanf("%lf", &vv);
 
-
 printf("Distance à parcourir en km :\n");
 scanf("%lf", &d);
 
@@ -23,9 +22,6 @@ t = (d / vit);
 tempsMinute = t *60;
 
 printf("Le temps sans vent est de : %lf minutes soit %lf heure(s)", tempsMinute, t);
-
-
-
 
  EXIT_SUCCESS;
 
