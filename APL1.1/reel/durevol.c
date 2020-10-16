@@ -21,7 +21,7 @@ t = (d / vit);
 
 tempsMinute = t *60;
 
-printf("Le temps sans vent est de : %lf minutes soit %lf heure(s)", tempsMinute, t);
+printf("Le temps sans vent est de : %lf minutes soit %lf heure(s)\n", tempsMinute, t);
 
  EXIT_SUCCESS;
 
