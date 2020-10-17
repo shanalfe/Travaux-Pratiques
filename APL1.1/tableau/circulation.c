@@ -1,8 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#define A 4
 int main(int argc, char const *argv[]){	
-	int tab [10], i, a, tabm[10];
+	int tab [10], i, a, tabc[10];
 	srand(time(NULL));
 	for (i=0; i<10; i++){
 		a = rand()%101 -50;
@@ -28,12 +29,20 @@ int main(int argc, char const *argv[]){
 	}
 	printf("+\n");
 	printf("| ");
+	
+	//circulation
 	for(i=0; i<10; i++){		
-		tabm[9-i]=tab[i];
+		if ( tab[i] <7){
+			tabc[i + A];
+		} else {
+			tabc [i - 10 + 4];
+		}
 	}
 	for (i=0; i<10; i++){
-		printf("%3d | ", tabm[i] );
+		printf("%3d | ", tabc[i] );
 	}
+	
+	
 	printf("\n");
 	for (i=0; i<10; i++){
 		printf("+-----");
