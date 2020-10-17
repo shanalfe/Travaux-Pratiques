@@ -35,7 +35,7 @@ int main(int argc, char const *argv[]){
 	//circulation
 	
 	for(i=0; i<10; i++){		
-		if ( tab[i] <= 7){
+		if ( tab[i] < 7){
 			tabc[i] = tab[i + A];
 		} else {
 			tabc[i] = tab[i - B];
