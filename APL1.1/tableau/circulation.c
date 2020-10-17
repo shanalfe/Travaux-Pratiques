@@ -1,7 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#define A 4
+#define  A  4
+#define  B  6
+
 int main(int argc, char const *argv[]){	
 	int tab [10], i, a, tabc[10];
 	srand(time(NULL));
@@ -31,17 +33,18 @@ int main(int argc, char const *argv[]){
 	printf("| ");
 	
 	//circulation
+	
 	for(i=0; i<10; i++){		
-		if ( tab[i] <7){
-			tabc[i + A];
+		if ( tab[i] <= 7){
+			tabc[i] = tab[i + A];
 		} else {
-			tabc [i - 10 + 4];
+			tabc[i] = tab[i - B];
 		}
 	}
+	
 	for (i=0; i<10; i++){
 		printf("%3d | ", tabc[i] );
 	}
-	
 	
 	printf("\n");
 	for (i=0; i<10; i++){
