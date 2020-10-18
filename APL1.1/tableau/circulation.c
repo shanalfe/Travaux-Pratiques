@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <time.h>
 #define  A  4
-#define  B  6
 int main(int argc, char const *argv[]){    
     int tab [10], i, a, tabc[10];
     srand(time(NULL));
