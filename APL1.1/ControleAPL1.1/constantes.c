@@ -13,7 +13,7 @@ int main(int argc, char const *argv[])
 	printf("%c\n", a);
 	printf("%ld\n",b);
 	printf("%1.0LF\n", c);
-	printf("%d\n",d );
+	printf("%x\n",d );
 
 
 
