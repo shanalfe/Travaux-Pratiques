@@ -9,7 +9,7 @@ int main(int argc, char const *argv[])
 	{
 		int i=j;
 		int j= i+1;
-		printf("%d %d,%d\n",i,j,k );
+		printf("%d %d %d\n",i,j,k );
 		k=j;
 	}
 	return 0;
