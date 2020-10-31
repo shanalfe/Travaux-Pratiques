@@ -1,30 +1,33 @@
-#include <stdio.h>
+/*Écrivez un programme qui demande à l'utilisateur de taper un mot de passe
+(ne faisant pas plus de 26 caractères) 
+et indique ensuite si l'authentification a réussi.*/
+
 #include <stdlib.h>
+#include <stdio.h>
 #include <string.h>
 
-int main(int argc, char const *argv[]){
+int main(int argc, char* argv[]) {
+	system ("clear");
+	int a;
+	int i=0, b =1;
+	char tab[26]="shana";
 
-	char tab[27] = "shana";
-	puts ("Entrez le mot de passe :");
-	int t, i=0, bol1 = 1, a;
+	puts("Veuillez taper un mot de passe : ");
 
-	//récupération du mot de pass
-	while (( a = getchar () ) != '\n'){
-		if (a == tab[i]){
+	while( ( a = getchar() ) !='\n'){
+		if (a == tab[i]){	
 			i++;
-		}else{
-			bol1 = 0;
+		} else {
+			b = 0;
 			return EXIT_FAILURE;
 		}
 	}
 
-	//vérification
-
-	if ( (bol1 = 1) && (i == strlen(tab)) ){
-		puts ("Authentification acceptée");
+// Vérification
+	if ( (b = 1) && (i == strlen(tab))){
+		puts("Mot de passe correct");
 	} else {
-		puts ("Echec");
+		puts("Echec");
 	}
-
-return EXIT_SUCCESS;
+	return EXIT_SUCCESS;
 }
