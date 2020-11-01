@@ -1,10 +1,8 @@
-
+/*Écrivez un programme qui demande trois entiers relatifs, puis affiche seulement le plus grand d'entre eux.*/
 #include<stdio.h>
 #include<stdlib.h>
 
-int main(int argc, char const *argv[])
-{
- 
+int main(int argc, char const *argv[]){
  	int a, b, c;
 
  	printf("Entrez un premier entier\n");
@@ -27,9 +25,5 @@ int main(int argc, char const *argv[])
  	if(c>a && c>b){
  		printf("le plus grand nombre est %d\n", c);
  	}
-
-
-
-
 	return 0;
 }
