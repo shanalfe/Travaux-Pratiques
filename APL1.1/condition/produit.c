@@ -1,3 +1,4 @@
+/*Érivez un programme qui demande deux entiers relatifs, puis affiche le signe de leur produit sans faire la multipliation*/
 #include<stdio.h>
 #include<stdlib.h>
 
