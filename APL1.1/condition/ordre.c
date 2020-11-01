@@ -1,11 +1,8 @@
+/*Écrivez un programme qui demande trois valeurs entières, puis les affiche dans l'ordre croissant.*/
 #include<stdio.h>
 #include<stdlib.h>
 
-
-
-
-int main(int argc, char const *argv[])
-{
+int main(int argc, char const *argv[]){
 	/*déclaration des variables*/
 	int a, b, c;
 
@@ -31,7 +28,6 @@ int main(int argc, char const *argv[])
 
 	if((a>b) && (a<c) && (b<c)){
 		printf(" le plus grand nombre est %d, puis %d et le plus petit nombre est %d\n",c,a,b );
-	}
-	
+	}	
 	return 0;
 }
