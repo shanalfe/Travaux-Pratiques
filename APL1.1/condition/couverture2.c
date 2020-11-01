@@ -1,3 +1,8 @@
+/*Lorsqu'une compagnie d'assurance prend en charge des réparations, elle laisse une franchise à la charge de l'assuré. Celle-
+ci est égale à 10% du montant des réparations, avec un minimum de 200e et un maximum de 800e.
+Programme qui demande le montant total des réparations, puis affiche la franchise correspondante ainsi que la part prise en 
+charge par l'assurance.*/
+
 #include<stdio.h>
 #include<stdlib.h>
 
