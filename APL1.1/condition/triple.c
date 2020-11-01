@@ -1,3 +1,5 @@
+/*Erivez un programme qui demande un entier naturel, puis affiche le multiple de 3 dont il
+est le plus proche.*/
 #include<stdio.h>
 #include<stdlib.h>
 
