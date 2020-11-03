@@ -14,7 +14,7 @@ int main(int argc, char* argv[]) {
 
 	puts("Veuillez taper un mot de passe : ");
 
-	while( ( a = getchar() ) !='\n'){
+	while( ( a = getchar() ) != '\n'){
 		if (a == tab[i]){	
 			i++;
 		} else {
