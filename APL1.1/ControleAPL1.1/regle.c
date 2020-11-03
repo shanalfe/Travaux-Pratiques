@@ -8,26 +8,28 @@ int main(int argc, char const *argv[]){
 	scanf("%d", &l);
 
 	if( (l>=1) && (l<=9)){
-			for (i=0; i<l; i++){
-				for(j=0; j<10; j++){
-					printf("|");
-			}		
+			printf("|");
 			
-	}
-	printf("|");
+			for (i=0; i<(l*2); i++){
+				
+				for(j=0; j<4; j++){
+					printf("\'");
+				}	
+			printf("|");
+			}	
+			
 	printf("\n");
 		printf("0");
 
 	for(m=0; m<l; m++){				
 				n=n+1;								
 				printf("%10d",n );				
-			}	
+	}	
 	printf("\n");
 	} else{
 		printf("Erreur\n");
 		return EXIT_FAILURE;
-	}
-	
+	}	
 
 	return EXIT_SUCCESS;
 }
