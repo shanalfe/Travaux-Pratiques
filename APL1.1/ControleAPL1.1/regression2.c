@@ -1,3 +1,5 @@
+/*Un pouce fait 2,56cm et un pied fait 12 pouces.
+Écrivez un programme qui demande à l'utilisateur sa taille en mètres, puis affiche l'équivalent impérial.*/
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>

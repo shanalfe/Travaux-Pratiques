@@ -1,5 +1,5 @@
 #include <stdio.h>
- #include <stdlib.h>
+#include <stdlib.h>
 int main(int argc, char const *argv[]){
 
 	int l, i =0, j=0, n=0, m=0;
