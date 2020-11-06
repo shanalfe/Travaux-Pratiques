@@ -19,7 +19,7 @@ int main(int argc, char* argv[]) {
 			i++;
 		} else {
 			b = 0;
-			return EXIT_FAILURE;
+			break;
 		}
 	}
 

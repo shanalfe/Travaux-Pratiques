@@ -17,7 +17,7 @@ int main(int argc, char const *argv[]){
 	fgets (tab, 200, stdin);
 
 	for (i=0; i<200; i++){
-		if (tab[i]== 'e'){
+		if ( (tab[i]== 'e') || (tab[i]=='E') ){
 			t = t+1;
 		}
 	}
@@ -40,7 +40,6 @@ int main(int argc, char const *argv[]){
 	}else {
 		printf("Il y a un seul caractère différent\n");		
 	}
-
 
 return EXIT_SUCCESS;
 }
