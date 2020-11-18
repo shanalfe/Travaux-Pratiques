@@ -1,29 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
-
-int main(int argc, char const *argv[]){
-
-    long long int n = 32217268732456802LL;
-   // long long int m = 981111111511115114LL;  
-    char tab [150];  
-    
-    printf("n en chaine de caractere : %s\n", &n);
-
-    long c = strtol (tab, NULL, 2);
-
-    printf("%lo\n", tab);
-
-   // printf("n en hexadecimal : %x\n", &n); // affichage en hexadécimal
-
-   //  printf("chaine de caractere : %s\n", &m);
-
+int main(int argc, char const *argv[])
+{
  
-     
 
-   
-    return EXIT_SUCCESS;
+  long long int n = 32217268732456802LL;
+  printf("%s\n", &n);
+  return EXIT_SUCCESS;
+
 }
+
 
 /*
 
