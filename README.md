@@ -1,6 +1,6 @@
 # Travaux-Pratiques
 
-Découvrez ici tout mes programmes que j'ai pu faire lors de mon DUT informatique.
+Découvrez ici tous mes TP que j'ai pu faire lors de mon DUT informatique. Dans le tableau ci-dessous, les différents modules en fonction des matières avec les sujets traités.
 
 |Modules/Matières | APL                               |    ASR                         |WIMS                       |SGBD                                        |
 |:-:              |:-:                                |:-:                             |:-:                        | :-:                                        |
