@@ -2,8 +2,8 @@
 
 Découvrez ici tout mes programmes que j'ai pu faire lors de mon DUT informatique.
 
-|  | APL | ASR |
-|:-:|:-:|:-:|
-| APL1.1 | E | F |
-| APL2.1 | E | F |
+|        | APL | ASR |WIMS|SGBD|
+|:-:     |:-:|:-:|:-:|:-:|
+| APL1.1 | E | x |x|
+| APL2.1 | E | x |x|
 
