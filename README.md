@@ -15,3 +15,5 @@ Découvrez ici tous mes TP que j'ai pu faire lors de mon DUT informatique. Dans 
 | SGBD1.2         | x                                 |  x                             |x                          | Exercices Diagramme de classe avec StarUML |
 
 
+
+mis à jour le 21/11/2020
