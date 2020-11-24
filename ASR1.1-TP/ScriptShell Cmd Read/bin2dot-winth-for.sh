@@ -1,29 +1,29 @@
 #!/bin/bash
 
-if [[$# -lt 2]]
+if [[ $# -lt 2 ]]
 then
-	echo "Usage $0 <input file> <output file>"
+	echo "Usage: $0 <SRC_FILE> <DEST_FILE>"
 	exit
 fi
 
-if [[! -f $1]]
-then 
-	echo "Le fichier n'existe pas"
-	exit
-fi
-
-if [[-f $2]]
-then 
-	echo -n "$2 exists. Overwrite? Yes/No -->"
-	read Overwrite
-
-if [[$Overwrite == "Yes"]]
+if [[ ! -f $1 ]]
 then
-	echo $2
-else
+	echo "File $1 does not exist !"
 	exit
 fi
+
+if [[ -f $2 ]]
+then
+	echo -n "$2 exists. Overwrite? Yes/No --> "
+	read answer
+	if [[ $answer == "Yes" ]]
+	then
+		rm $2
+	else
+		exit
+	fi
 fi
+
 
 for addr in $(cat $1) 
 do
