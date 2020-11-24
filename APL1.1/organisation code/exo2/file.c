@@ -1,7 +1,4 @@
-
 #include "file.h"
-
-
 
 
 int file_empty(file f) {
