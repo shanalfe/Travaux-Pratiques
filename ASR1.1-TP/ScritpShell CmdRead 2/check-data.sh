@@ -3,7 +3,7 @@
 if [[$# -ne 3]]
 then
 	echo -n "Usage : $0"
-	echo "<STRINGS_REPRESENTATIONS_FILE><radix> <REPORTS_FILE>"
+	echo -n "<STRINGS_REPRESENTATIONS_FILE><radix> <REPORTS_FILE>"
 	echo "<radix> <REPORTS_FILE>"
 	exit
 fi
