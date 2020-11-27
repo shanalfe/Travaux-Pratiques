@@ -32,3 +32,16 @@ then
 		exit
 	fi
 fi
+
+
+digit = 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ
+digit = $(expr substr $digit 1 $2)
+
+
+while read line 
+do
+	echo -n "$line :" 
+	tr -d $digit <<< "$line" ##le tr -d permet d'effacer tous les caractères de $digit
+
+done < $1 > $3
+exit 
