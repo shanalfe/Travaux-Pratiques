@@ -36,11 +36,13 @@ int main(int argc, char const *argv[]){
 		i++;
 		} while ( (lus) && (tampon [i-1] != '\n') ) ;
 
-		ecrit = write (descripteur, tampon, i);
-		if (ecrit == -1){
-			perror ("Error writing file");
-			exit (EXIT_FAILURE);
-		}
+		if (lus){
+			ecrit = write (descripteur, tampon, i);
+				if (ecrit == -1){
+					perror ("Error writing file");
+					exit (EXIT_FAILURE);
+				}
+			}
 	printf("\n");
 	}while (lus);
 
