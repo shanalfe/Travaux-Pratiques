@@ -10,9 +10,9 @@ int main(int argc, char const *argv[]){
 	FILE* flux;
 
 	flux = fopen ("top10", "r");
-	
 	if (flux){
-		for (i=0; i<10; i++){
+	
+	while (! feof (flux) ){		
 			fread (&s, sizeof(int),1, flux );
 			fread (&n, sizeof (char), 3, flux);	
 			printf("%s : %09i \n",n, s );
@@ -21,7 +21,7 @@ int main(int argc, char const *argv[]){
 	fclose (flux);
 
 	}else {
-		perror ("Fichier non existant");
+		perror ("The file doesn't exist !");
 		return EXIT_FAILURE;
 	}	
 	
