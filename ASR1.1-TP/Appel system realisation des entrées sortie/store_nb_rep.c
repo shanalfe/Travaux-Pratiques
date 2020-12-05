@@ -1,6 +1,5 @@
 #include <unistd.h>
 #include <fcntl.h>
-
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -38,7 +37,6 @@ int main(int argc, char const *argv[]){
 		} while ( (lus) && (tampon [i-1] != '\n') ) ;
 
 		if (lus){
-
 			valeur = (int) strtol (tampon, &fin, 10);
 			if (*fin != '\n'){
 				printf("This is not an integer\n");
@@ -54,8 +52,6 @@ int main(int argc, char const *argv[]){
 		}
 	printf("\n");
 	}while (lus);
-
 	close (descripteur);
-
 	return EXIT_SUCCESS;
 }
