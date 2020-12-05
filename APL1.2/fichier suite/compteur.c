@@ -19,10 +19,10 @@ int main(int argc, char const *argv[]){
 	} else if (f){
 
 		fread (&n, sizeof (int), 1, f);
-		fclose (f);
+		fclose (f);		
+		f= fopen ("compteur.dat", "w");
 		n++;
 		printf("%d \n",n );
-		f= fopen ("compteur.dat", "w");
 		fwrite (&n, sizeof (int), 1, f);
 		fclose (f);
 	}
