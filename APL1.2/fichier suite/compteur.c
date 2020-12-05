@@ -9,12 +9,15 @@ int main(int argc, char const *argv[]){
 	f = fopen ("compteur.dat", "r");
 
 	if (! f){
+
 		n = 1;
 		f = fopen ("compteur.dat", "w");
 		printf("%d \n", n);
 		fwrite (&n, sizeof (int), 1, f);
 		fclose (f);
+		
 	} else if (f){
+
 		fread (&n, sizeof (int), 1, f);
 		fclose (f);
 		n++;
