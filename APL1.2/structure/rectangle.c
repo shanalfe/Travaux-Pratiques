@@ -1,32 +1,32 @@
- #include <stdio.h>
- #include <stdlib.h>
-#include <graph.h>
+#include<stdio.h>
+#include<stdlib.h>
+#include<graph.h>
 
-/*
-
-struct Rectangle {
-	int x;
-	int y;
-	int l;
-	int h;
-
+struct Rectangle{
+    int longeur;
+    int largeur;
 };
-*/
 
 
+int main(int argc, char * argv[]){
 
+    int end = 0;
+    InitialiserGraphique();
+    CreerFenetre(10,10,500,500);
+    struct Rectangle rec = {50,70};
 
-int main(int argc, char const *argv[]){
+    DessinerRectangle(0,0,rec.longeur, rec.largeur);
 
-	InitialiserGraphique();
-    CreerFenetre(20,20,500,500);
-    
-    DessinerRectangle(100,100,100,100);
+    while(!end){
 
-    Touche();
+        while(!SourisCliquee()){
+
+        }
+
+        DessinerRectangle(_X,_Y,rec.longeur, rec.largeur);
+    }
 
     FermerGraphique();
-	
 
-	return EXIT_SUCCESS;
+return EXIT_SUCCESS;
 }

@@ -39,6 +39,7 @@ int main(int argc, char const *argv[]){
 
 
 	/* Affichage de la deuxième partie du carré*/
+	/*
 	j=c;
 
 	for (j; j>=0; j--) {
@@ -57,6 +58,6 @@ int main(int argc, char const *argv[]){
 		}
 		printf("\n");
 	}
-
+*/
 	return EXIT_SUCCESS;
 }
