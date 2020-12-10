@@ -1,46 +1,70 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
-
 
 
 	double SalaireB (int x, int b){
 
-		srand(time (NULL));
-		b = rand()%5000;
+		double SalB;	
+		int tab [46];
 
-		/*
-
-		if ( (x<=0) && (x<=34) ){
-			b = b + (b/34)* x ;
+		if ( (x>=0) && (x<=34) ) {
+			SalB = b + ( b/34)* x ;
 		} 
-		if ( (x>34) && (x<=34) ){
-			b  = 2 *
+
+		if ( (x>34) && (x<=42) ) {
+			SalB  = 2 * b ; 
 		}
-		*/
-
-		printf("Salaire de base : %lf \n", b);
-
-		
-	}
-
-	double SalaireM (double *t, int taille){
-
-	}
-
-	void Tab (int){
-
+		return SalB;	
 	}
 
 
+
+	int AfficherTab (int tab []) {
+		int x, b;
+		double SalB;
+
+		if ( (x<=0) && (x<=42) ){
+
+			for (x=0; x<=34; x++ )  {
+				SalB = b + ( b/34)* x ;
+				tab[x]= SalB;
+				printf("%3d\n",tab [x] );
+			} 
+			
+			for  (x=34; x<=42; x++)  {
+				SalB  = 2 * b ; 
+				tab [x] = SalB;
+				printf("%3d\n", tab[x] );
+			}
+
+			
+		}
+
+	}
 
 
 
 
 
 int main(int argc, char const *argv[]){
+	
+	double SalB;
+	int b,x;
 
-	double SalaireB = 0.00;
+	int tab [46];
+
+	printf(" Salaire de base : ");
+	scanf ("%d", &b);
+	printf("Année de travail:  ");
+	scanf ("%d", &x);
+
+	SalB = SalaireB (x, b);
+
+	printf("SalbX = %lf euros\n", SalB);
+
+
+	AfficherTab (tab);
+
 
 return EXIT_SUCCESS;
 }
