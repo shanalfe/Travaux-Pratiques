@@ -4,7 +4,7 @@
 int main(int argc, char const *argv[]){
 
     int nbre_joueur = 0, i =0;
-    int * liste_joueur;
+    int * liste_joueur = NULL;
 
     printf ("Nombre de joueur : ");
     scanf ("%d", &nbre_joueur);
@@ -18,13 +18,11 @@ int main(int argc, char const *argv[]){
     }
 
     for (i = 0; i < nbre_joueur; i++){
-        printf ("Joueur %d -> numéro %d \n", i +1, i*3);
+        printf ("Joueur %d -> numéro %d \n", i + 1, i * 3 );
         liste_joueur [i]= i*3;
     }
-
-    for ( i=0; i< nbre_joueur; i++ ) {
-       printf (" %d ", liste_joueur[i] );
-    }
+    
+    free (liste_joueur);
     
     return 0;
 }
