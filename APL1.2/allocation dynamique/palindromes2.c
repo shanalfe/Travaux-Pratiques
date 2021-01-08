@@ -2,8 +2,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-
-
 char* inverse(const char* s){
 
 	int i = 0, j= 0;
@@ -22,11 +20,8 @@ char* inverse(const char* s){
 			p[i] = fin;
 		}
 	}
-
 	return p;
 }
-
-
 
 
 
@@ -36,21 +31,16 @@ char* debut = NULL;
 	char* fin = NULL;
 	int i = 0;
 
-
-	for (i = 1; i < argc; ++i)
-	{
+	for (i = 1; i < argc; ++i){
 		debut = argv[i];
 		fin = inverse(argv[i]);
 
-		if(strcmp(debut,fin)== 0)
-		{
+		if(strcmp(debut,fin)== 0){
 			printf("%s est un pallindrome\n",debut);
-		}
-		else{
+		}else{
 			printf("%s n'est pas un pallindrome\n",debut);
 		}
-	}
-	
+	}	
 
 return EXIT_SUCCESS;
 }
