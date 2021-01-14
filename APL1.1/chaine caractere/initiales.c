@@ -8,7 +8,7 @@ int main(int argc, char const *argv[]){
 	int i;
 
 	for (i=0; i<argc; i++){
-		printf("%.1s\n", argv[i]);
-	}
+		printf("%.1s ", argv[i]);
+	}printf("\n");
 return EXIT_SUCCESS;
 }
