@@ -1,22 +1,5 @@
-/*
-    ALGO
-    
-    Création d'une liste chainée pouvant accueillir 10 entiers.
-    Dans chaque cellule, il y' a un nombre aléatoire entre 111 et 999
-    On affiche cette liste
-    On reparcours la liste
-    
-    si le nombre précedent est > suivant alors
-        précédent est le plus grand donc on garde le précedent 
-    sinon 
-        on garde le suivant
-
-*/
-
-
 #include<stdio.h>
 #include<stdlib.h>
-#include <time.h>
 
 
 /*Création de la structure*/
@@ -47,12 +30,10 @@ void Afficher(struct cellule * liste){
 
 int main(){
 
-    srand( time( NULL ) );
-
     /*Initialisation des listes  à NULL*/
-    struct cellule *Liste=NULL;
+    struct cellule *Liste=NULL,*Pair=NULL,*Impair=NULL;
 
-    struct cellule *p;
+    struct cellule *p,*q,*q1,*q2,*pp;
 
     int i, n;
 
@@ -66,16 +47,24 @@ int main(){
 
 
     /*Créé le nombre de cellules nécessaires dans la liste*/
-    for(i=0;i<10;i++){
+    for(i=0;i<n;i++){
 
         p = (struct cellule *)malloc(sizeof(struct cellule));
       
 
         /*Initialise son pointeur à la valeur nul*/
+        scanf("%d",&(*p).a);
         (*p).suivant=NULL;
 
 
-       
+        if(i==0){
+
+            Liste = p;
+        }else{
+            (*q).suivant=p;
+        }
+
+        q=p;
     }
 
     p=Liste;
@@ -84,12 +73,47 @@ int main(){
     /*Parcours la liste chainée*/
     while(p!=NULL){
 
+        /*Pour chaque p, on créé une copie *pp */
+        pp = (struct cellule *)malloc(sizeof(struct cellule));
+       /*On copie la liste chainée d'initialisation*/
+        (*pp).a = (*p).a;
+        /*Initialise  à NULL*/
+        (*pp).suivant=NULL;
+       
+        /*Si pp est pair alors */
+        if((*pp).a%2==0){
+            if(Pair==NULL){
+                Pair = pp;
+            }else{
+                (*q1).suivant = pp;
+            }
+            q1=pp;
+
+        }else{
+
+            if(Impair==NULL){
+                Impair = pp;
+
+            } else {
+                (*q2).suivant = pp;
+            }
+
+            q2=pp;
+
+        }
+
+        p=(*p).suivant;
     }
 
     printf("Liste complete:\n");
     Afficher(Liste);
 
- 
+    printf("Liste des nombres pairs:\n");
+    Afficher(Pair);
+
+    printf("Liste des nombres impairs:\n");
+    Afficher(Impair);
+
   
 
     return EXIT_SUCCESS;
