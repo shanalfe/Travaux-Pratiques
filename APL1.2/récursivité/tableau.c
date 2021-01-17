@@ -6,9 +6,9 @@ void Tableau (double tab[], int i){
 
 	if (i > 0){
 
-		Tableau (tab, i-1);
+		Tableau (tab, i-1); /*Récursivité, on remonte la "chaine" */
 		putchar (',');
-		printf(" %.2lf", tab [i] );
+		printf(" %.2lf", tab [i] ); /*Affichage de chaque partie du tableau*/
 
 	}else {
 		printf("%.2lf", tab [0] );
@@ -19,9 +19,11 @@ void Tableau (double tab[], int i){
 
 int main(int argc, char const *argv[]){
 
+	/* Initialisation du tableau*/
 	double tab [5]= { 1.25, 47.80, 77.01, 54.23, 895.14 };
 
-	Tableau (tab, 4);
+	Tableau (tab, 4); /*appel du tableau et du nombre d'indice*/
+
 	printf("\n");
 
 return EXIT_SUCCESS;

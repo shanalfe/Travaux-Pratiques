@@ -11,10 +11,13 @@ unsigned long int nfib(unsigned n){
 		fib =nfib(n-1)+nfib(n-2);
 
 	return fib;
-}
+	
+	}
 }
 
 int main (int argc, char const *argv[]){
+	
+
 	printf("%Lu\n", nfib(20));
 
 
