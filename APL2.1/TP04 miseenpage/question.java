@@ -38,5 +38,6 @@ public class question {
 		fenetre.add(panneau, BorderLayout.SOUTH);
 		// affichage de la fenetre
 		fenetre.setVisible(true);
+		
 	}
 }

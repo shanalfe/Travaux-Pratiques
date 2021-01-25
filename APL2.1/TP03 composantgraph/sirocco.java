@@ -1,4 +1,3 @@
-// on en a besoin car on utilise JFrame ect..
 import javax.swing.*;
 import java.awt.*;
 
@@ -14,7 +13,7 @@ public class sirocco {
 		fenetre.setSize(500,300);	// long : 500; hauteur 300
 
 		// position de la fenetre sur l'écran en haut à gauche
-		fenetre.setLocation(0,0); 	// position horizontale; position verticale
+		fenetre.setLocation(300,300); 	// position horizontale; position verticale
 
 
 		// création de texte
