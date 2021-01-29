@@ -11,6 +11,24 @@ public class Date {
 		Recuperation d = new Recuperation ();
 		d.Recup();
 		System.out.println (d);
+
+		d.Lendemain();
+		System.out.println (d);
+
+		d.Lendemain();
+		System.out.println (d);
+
+		d.Lendemain();
+		System.out.println (d);
+
+		d.Lendemain();
+		System.out.println (d);
+
+		d.Lendemain();
+		System.out.println (d);
+
+		d.Lendemain();
+		System.out.println (d);
 	}
 
 }
