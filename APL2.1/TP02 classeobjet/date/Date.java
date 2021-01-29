@@ -1,13 +1,17 @@
+/**
+* @version 1.1 
+* @author Shana Lefevre
+*/
+
+
 public class Date {
-  int annee, mois, jour;
 
-  public Date(int annee, int mois, int jour) {
-    this.annee = annee;
-    this.mois = mois;
-    this.jour = jour;
-  }
+	public static void main (String [] args) {
 
-  public String toString() {
-    return Integer.toString(annee)+"/"+String.format("%02d",mois)+"/"+String.format("%02d",jour);
-  }
+		Recuperation d = new Recuperation ();
+		d.Recup();
+		System.out.println (d);
+	}
+
 }
+
