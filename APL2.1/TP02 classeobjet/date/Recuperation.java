@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+
+/* classe */
 public class Recuperation {
 
 	/*Attribut*/
@@ -20,6 +22,7 @@ public class Recuperation {
 		this.j = recup.nextInt();
 	}
 
+	/*Methode*/
 	public void Lendemain (){
 		int[] tab = {31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31} ;
 		this.j = this.j + 1;
@@ -35,13 +38,10 @@ public class Recuperation {
 
 	}
 
+	/*Méthode toString affichage*/
 	public String toString(){
 		return this.a+"-"+this.m+"-"+this.j;
-	}
-
-
-
-	
+	}	
 		
 
 }
