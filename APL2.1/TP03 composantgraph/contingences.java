@@ -1,14 +1,7 @@
-/**
-* @version 1.1 
-* @author Shana Lefèvre
-*/
-
 import javax.swing.*;
 import java.awt.*;
 
-
 public class saisie{
-	
 	public static void main(String[] args) {
 	
 
