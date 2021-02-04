@@ -8,21 +8,41 @@ public class piege {
 	public static void main(String[] args) {	
 	
 		JFrame fenetre = new JFrame("Piege");
-		Dimension size = new Dimension(200,200);
+		
 		GridLayout grid = new GridLayout();
 		fenetre.setLayout(null); 
 
-		fenetre.setSize(500,500);
-		fenetre.setMinimumSize(size);
+		fenetre.setSize(400,400);
+		
 		fenetre.setLocation(200,200);
 		fenetre.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-		JButton un = new JButton ("1");
-		un.setLocation (100,200);
+		JButton u = new JButton ("1");
+		u.setLocation (0,0);
+		u.setSize (300,100);
+
+		JButton d = new JButton ("2");
+		d.setLocation (300,0);
+		d.setSize (100, 300);
+
+		JButton t = new JButton ("3");
+		t.setLocation (100,300);
+		t.setSize (300, 100);
+
+		JButton q = new JButton ("4");
+		q.setLocation (0,100);
+		q.setSize (100, 300);
+
+		JButton c = new JButton ("5");
+		c.setLocation (100,100);
+		c.setSize(200,200);
 
 
-		fenetre.add (un);
-
+		fenetre.add (u);
+		fenetre.add (d);
+		fenetre.add (c);
+		fenetre.add (q);
+		fenetre.add (t);
 		fenetre.setVisible (true);
 
 

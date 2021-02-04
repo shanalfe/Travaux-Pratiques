@@ -1,7 +1,12 @@
 import javax.swing.*;
 import java.awt.*;
-import javax.swing.JButton;
-import javax.swing.ButtonGroup;
+
+/**
+* @version 1.1 
+* @author Shana Lefèvre
+*/
+
+
 
 public class choix {
 	public static void main(String[] args) {
@@ -10,11 +15,36 @@ public class choix {
 
 		fenetre.setSize(800,400);
 		fenetre.setLocation(0,0);
+		fenetre.setDefaultCloseOperation (JFrame.EXIT_ON_CLOSE);
 
-		ButtonGroup group = new ButtonGroup();
-		group.add(JRadioButton "tets");
-		group.add(JRadioButton "nc");
+		JPanel panneau = new JPanel();
+		/*Empile les élément du panneau avec boxlayout*/
+		
+		panneau.setLayout (new BoxLayout (panneau, BoxLayout.PAGE_AXIS));
 
+		//création et ajout au group de boutton
+		ButtonGroup classe = new ButtonGroup();	
+		
+
+		//création des differents bouttons
+		JRadioButton g = new JRadioButton("Gryffondor");		
+		JRadioButton sdl = new JRadioButton("Serdaigle");			
+		JRadioButton spd = new JRadioButton("Serpentard");
+		JRadioButton p = new JRadioButton ("Poufsouffle");
+	
+		/*Ajout des boutons à la classe*/
+		classe.add(g);
+		classe.add(sdl);
+		classe.add(spd);
+		classe.add (p);
+
+		/*Ajout des boutons au panneau*/
+		panneau.add(g);
+		panneau.add(sdl);
+		panneau.add(spd);
+		panneau.add (p);
+		
+		fenetre.add(panneau, BorderLayout.CENTER);	
 		fenetre.setVisible(true);
 	}
 }
