@@ -8,8 +8,7 @@ import java.awt.*;
 
 public class question {
 	public static void main(String[] args) {
-			
-		// creation de la fenetre
+	
 		JFrame fenetre = new JFrame();
 		fenetre.setSize(400,200);
 
