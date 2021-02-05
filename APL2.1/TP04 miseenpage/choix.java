@@ -7,14 +7,17 @@ import java.awt.*;
 */
 
 
-
 public class choix {
 	public static void main(String[] args) {
 		
 		JFrame fenetre = new JFrame();
 
-		fenetre.setSize(800,400);
-		fenetre.setLocation(0,0);
+		Dimension dim = new Dimension (200,200);
+
+		fenetre.setSize(300,300);
+		fenetre.setLocation(100,100);
+
+		fenetre.setMinimumSize (dim);
 		fenetre.setDefaultCloseOperation (JFrame.EXIT_ON_CLOSE);
 
 		JPanel panneau = new JPanel();

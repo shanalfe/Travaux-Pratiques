@@ -8,6 +8,7 @@ public class piege {
 	public static void main(String[] args) {	
 	
 		JFrame fenetre = new JFrame("Piege");
+		fenetre.setIconImage(Toolkit.getDefaultToolkit().getImage("../caca.png"));
 		
 		GridLayout grid = new GridLayout();
 		fenetre.setLayout(null); 
@@ -43,9 +44,8 @@ public class piege {
 		fenetre.add (c);
 		fenetre.add (q);
 		fenetre.add (t);
+
 		fenetre.setVisible (true);
-
-
 
 	}
 }

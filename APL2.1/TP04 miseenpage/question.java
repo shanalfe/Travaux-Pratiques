@@ -35,8 +35,8 @@ public class question {
 
 		JPanel panel = new JPanel ();
 		panel.setLayout (new BorderLayout () );
-		panel.add (panneau, BorderLayout.CENTER);
 		panel.add  (quest, BorderLayout.NORTH);
+		panel.add (panneau, BorderLayout.CENTER);
 		fenetre.add (new JLabel ("") );
 		fenetre.add (panel);
 

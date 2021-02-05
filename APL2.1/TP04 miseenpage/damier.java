@@ -39,14 +39,13 @@ public class damier{
 				
 				JPanel panneau = new JPanel();
 
-				if ((i+j)%2 == 0) { // permet de décaler 1/2
+				if ((i+j)%2 == 0) { 
 					panneau.setBackground(Color.WHITE);
 				}
 
 				else{
 	                panneau.setBackground(Color.CYAN);
            		}
-
            		fenetre.add(panneau); 
 			}			
 		}
