@@ -7,29 +7,25 @@ import java.awt.*;
 */
 
 
-public class Formes {
+public class Sautoir {
 
-
-	//pas besoin d'un import car carré est dans le même repertoire
 
 	public static void main(String[] args) {
+
+		int i=0;
 		
 		JFrame fenetre = new JFrame ();
-		fenetre.setSize(800,450);
+		fenetre.setSize(855,530);
 		fenetre.setLocation(0,0);
 		fenetre.setDefaultCloseOperation (JFrame.EXIT_ON_CLOSE);
-		
 
-
-		//création de la classe carré ; first est la variable
-		Carre first = new Carre();
-
-		
-		//ajout de la classe carré à la fenetre
-		fenetre.add(first, BorderLayout.CENTER);
+		fenetre.setLayout (new GridLayout (5,5));
+	
+		for (i = 0; i<25; i++){
+			fenetre.add(new Sablier() );
+		}
 
 		fenetre.setVisible(true);
-
 
 	}
 }
