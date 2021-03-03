@@ -5,10 +5,10 @@ public class Main {
 
 		Moyenne moy = new Moyenne ();
 
-		moy.add (5.0);
-		moy.add (3);
-		moy.add (20);
-
+		moy.add (10);
+		moy.add (10);
+		moy.add (19);
+		
 		System.out.println (moy.getAverrage());
 	}
 }
