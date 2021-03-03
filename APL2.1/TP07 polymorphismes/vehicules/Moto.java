@@ -1,10 +1,13 @@
+/**
+ * Classe Moto qui hérite de l'interface Véhicule donc on utilise implments
+ */
 
-// on utilise implements car hérite d'une interface
 public class Moto implements  Vehicule  {
-	//déclaration
-	int nbRoues =2;
+	
+	int nbRoues = 2;
 
 	public String sorte(){
+
 		return "Moto";
 	}
 

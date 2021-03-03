@@ -1,10 +1,15 @@
+/**
+ * @version 3 mars 2020
+ * @author Shana LEFEVRE
+ */
+
 import javax.swing.JOptionPane;
 
 public class Test {
 	public static void main(String[] args) {
 		
-		Vehicule v;
-		Object[] choix = {"Voiture", "Moto"};
+		Vehicule v; /* Appel de l'interface */
+		Object[] choix = {"Voiture", "Moto"}; /* Appel de classe abstract */
 
 		int reponse = JOptionPane.showOptionDialog(null, "Quel v\u00E9hicule choisissez-vous ?", 
 			"question",
@@ -14,7 +19,7 @@ public class Test {
 			choix,
 			null );
 
-		if (reponse ==0)
+		if (reponse == 0)
 			v = new Voiture();
 		else
 			v = new Moto();

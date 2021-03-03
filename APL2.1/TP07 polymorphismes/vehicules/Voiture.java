@@ -1,8 +1,11 @@
-// on utilise implements car hérite d'une interface
+/**
+ * Classe Voiture qui hérite de l'interface Vehicule donc on utilise implements
+ */
+
 public class Voiture implements Vehicule {
-	//initialisation des variables
+	
 	int nbRoues = 4;
-	//création 
+
 	public String sorte(){
 		return "Voiture";
 	}

@@ -1,6 +1,9 @@
-//Vehicule hérite de Test.java, donc on utilise interface
+/**
+ * Classe Vehicule qui hérite de Test.java donc on utilise une interface
+ */
+
 public interface Vehicule {
-	// intitialisation
+	
 	String sorte();
 	int nbRoues();
 
