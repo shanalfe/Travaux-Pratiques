@@ -46,6 +46,7 @@ public class nuancier {
 
 	}
 
+
 	public static void main(String[] args) {	
 		int i;
 		JFrame w = new JFrame ("Nuancier");
@@ -59,7 +60,6 @@ public class nuancier {
 
 		w.setVisible (true);
 	
-
 	}
 
 }
