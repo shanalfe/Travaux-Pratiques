@@ -1,11 +1,18 @@
-/**
- * @version 3 mars 2020
- * @author Shana
- */
+public class Moyenne {
 
- public class Moyenne {
-     public static void main(String[] args) {
-         
-     }
+ 	double s = 0;
+ 	double compteur = 0;
+
+ 	public void add (Number nb){
+ 		this.s = nb.doubleValue();
+ 		this.compteur++;
+ 	}
+
+ 	public double getAverrage (){
+ 		return this.s/this.compteur;
+ 	}
+
+   
+
      
  }
