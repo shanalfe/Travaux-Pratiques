@@ -19,11 +19,8 @@ public class Formes {
 		fenetre.setLocation(0,0);
 		fenetre.setDefaultCloseOperation (JFrame.EXIT_ON_CLOSE);
 		
-
-
 		//création de la classe carré ; first est la variable
 		Carre first = new Carre();
-
 		
 		//ajout de la classe carré à la fenetre
 		fenetre.add(first, BorderLayout.CENTER);
