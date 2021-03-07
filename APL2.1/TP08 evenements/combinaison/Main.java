@@ -16,15 +16,17 @@ public class Main {
 		JPanel panneau = new JPanel();
 
 		
-		Combinaison a = new Combinaison(panneau);
-
 		panneau.add(cyan);
 		panneau.add(jaune);
 		panneau.add(magenta);
 
 
 		fenetre.add(panneau, BorderLayout.CENTER);
+
+
+		Combinaison a = new Combinaison(panneau);
 	
+		/*--- Aj ---*/
 		cyan.addItemListener(a);
 		jaune.addItemListener(a);
 		magenta.addItemListener(a);

@@ -20,25 +20,20 @@ public class Combinaison implements ItemListener {
 
 	public void itemStateChanged (ItemEvent e) {
 
-		int status = e.getStateChange ();
+		int status = e.getStateChange ();		
 
+		/** récupérer la référence à cette case */
+		JCheckBox source = (JCheckBox)e.getSource();
 
-		if (status == ItemEvent.SELECTED) {
-
-		}
-			
-	
-	
-		if(e.getsource() == cyan ) {
+		/** Transtypage */
+		
+		
+		/*Comparaison*/ 
+		
+		if( source == cyan ) {
 			panneau.setBackground(Color.CYAN);
 		}
 
-
-
-		/*
-		else if(action.equals("Jaune")){
-			panneau.setBackground(Color.YELLOW);
-		}*/
 
 
 	}
