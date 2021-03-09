@@ -13,10 +13,10 @@ import java.awt.event.*;
 
 public class Fond implements ActionListener {
 
-	private JPanel panneau;
+	private JPanel pan;
 
-	public Fond(JPanel panel) {
-		this.panneau = panel;
+	public Fond (JPanel panel) {
+		this.pan = panel;
 	}	
 
 	/*--- Création de l'évènement ---*/
@@ -26,15 +26,15 @@ public class Fond implements ActionListener {
 		String action = e.getActionCommand();
 	
 		if(action.equals("Cyan")){
-			panneau.setBackground(Color.CYAN);
+			pan.setBackground(Color.CYAN);
 		}
 
 		else if(action.equals("Jaune")){
-			panneau.setBackground(Color.YELLOW);
+			pan.setBackground(Color.YELLOW);
 		}
 
 		else if (action.equals("Magenta")){
-			panneau.setBackground(Color.MAGENTA);
+			pan.setBackground(Color.MAGENTA);
 		}
 
 	}

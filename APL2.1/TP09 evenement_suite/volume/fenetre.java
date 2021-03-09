@@ -1,41 +1,20 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
 
+public class fenetre extends JFrame{
 
-public class fenetre {
+	public fenetre (){
+		Dimension d = new Dimension(1500, 200);
 
-	public static void main(String[] args) {
+		this.setSize(1500, 200);
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.setMinimumSize(d);
+		this.setLocation(200, 200);
 
-		// création d'une fenetre
-		JFrame fenetre = new JFrame();
-		fenetre.setSize(1000,200);
-		fenetre.setLocation(0,0);
+		Dessin circle = new Dessin(5);
+		this.add(circle);
 
-
-
-		// création d'une grille
-		GridLayout grille = new GridLayout(1,10);
-		//affichage
-		fenetre.setLayout(grille);
-
-
-		//boucle création de 10 cercles
-		for (int i=0; i<=10;i++)
-			fenetre.add(new Volume());
-
-
-		Couleur pan = new Couleur();
-		Commande action = new Commande (pan);
-
-
-		fenetre.add(panneau, BorderLayout.CENTER);
-		panneau.addActionListener(action);
-
-	
-
-
-
-		fenetre.setVisible(true);
+		Commande listen = new Commande (this.circle);
+		this.addMouseWheelListener(listen);
 	}
 }

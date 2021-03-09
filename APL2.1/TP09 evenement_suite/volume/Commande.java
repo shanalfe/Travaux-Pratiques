@@ -1,27 +1,29 @@
+import java.awt.event.*;
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
 
-public class Commande implements ActionListener{
+public class ScrollListener implements MouseWheelListener{
+	private int taille;
+	private Dessin circle;
+	private JFrame vue;
 
-	//déclaration des variables
-	private JPanel panneau;
-
-
-	public void mouseWeelMoved(MouseWeelEvent evenement){
-		
-		//création d'une variables nommée rotate
-
-		int rotate = evenement.getWeelRotation();
-
-		//condition
-		if (rotate>0){
-			setOff();
-		}else if (rotate<0){
-			setOn();
-		}
-
+	public ScrollListener(JFrame frame,Dessin cercle){
+		this.vue = frame;
+		this.circle = cercle;
 	}
-
-
+	public void mouseWheelMoved(MouseWheelEvent e)
+	{
+		int i = 0;
+		taille = taille + e.getWheelRotation();
+		if (taille <= 0) {
+			taille = 0;
+		}
+		if (taille >= 10) {
+			taille = 10;
+		}
+		System.out.println(taille);
+		circle.newSize(taille);
+		this.vue.repaint();
+		e.consume();
+	}
 }
