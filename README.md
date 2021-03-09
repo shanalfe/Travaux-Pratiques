@@ -4,6 +4,7 @@ Découvrez ici tous mes TP que j'ai pu faire lors de mon DUT informatique à l'i
 
 |Modules/Matières | Sujets abordés                    |
 |:-:              |:-:                                |
+| Premier semestre |
 | APL1.1          | Bases du langage C                | 
 | APL1.2          | Approfondissement du langage C    |
 | ASR1.2          | Exercices programmes en Shell     |                   
