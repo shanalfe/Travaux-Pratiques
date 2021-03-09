@@ -1,19 +1,21 @@
 # Travaux-Pratiques
 
-Découvrez ici tous mes TP que j'ai pu faire lors de mon DUT informatique. Dans le tableau ci-dessous, les différents modules en fonction des matières avec les sujets traités.
+Découvrez ici tous mes TP que j'ai pu faire lors de mon DUT informatique à l'iut de Fontainebleau (77). Dans le tableau ci-dessous, les différents modules avec ses différents thèmes abordés.
 
-|Modules/Matières | APL                               |    ASR                         |WIMS                       |SGBD                                        |
-|:-:              |:-:                                |:-:                             |:-:                        | :-:                                        |
-| APL1.1          | Bases du langage C                | x                              |x                          |  x                                         |
-| APL1.2          | Approfondissement du langage C    | x                              |x                          |  x                                         |
-| APL2.1          | Java                              |  x                             |x                          |   x                                        |
-| ASR1.2          | x                                 |  Exercices programmes en Shell |x                          |   x                                        |
-| ASR2.1          | x                                 |  x                             |x                          |   x                                        |
-| WIM1.2          | x                                 |  x                             |Exercices en html & CSS    | x                                          |
-| WIM2.1          | x                                 |  x                             |PHP                        |   x                                        |
-| SGBD1.1         | x                                 |  x                             |x                          | Exercices programme en SQL                 |
-| SGBD1.2         | x                                 |  x                             |x                          | Exercices Diagramme de classe avec StarUML |
+|Modules/Matières | Sujets abordés                    |
+|:-:              |:-:                                |
+|                 |Premier semestre                   |
+| APL1.1          | Bases du langage C                | 
+| APL1.2          | Approfondissement du langage C    |
+| ASR1.2          | Exercices programmes en Shell     |                   
+| WIM1.2          | Exercices en HTML et CSS          |  
+| SGBD1.1         | Découvertes des bases en SQL      |  
+|                 |Deuxième semestre                  |
+| APL2.1          | Java                              |  
+| WIM2.1          | PHP                               | 
+| SGBD2.1         | Utilisation des triggers, des fonctions et des procédures |  
+| SGBD2.2         | Conversion des diagrammes de classes en requêtes SQL |
 
 
 
-mis à jour le 21/11/2020
+Mis à jour le 09/03/2020
