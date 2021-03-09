@@ -1,6 +1,6 @@
 # Travaux-Pratiques
 
-Découvrez ici tous mes TP que j'ai pu faire lors de mon DUT informatique à l'iut de Fontainebleau (77). Dans le tableau ci-dessous, les différents modules en fonction des matières avec les sujets traités.
+Découvrez ici tous mes TP que j'ai pu faire lors de mon DUT informatique à l'iut de Fontainebleau (77). Dans le tableau ci-dessous, les différents modules avec ses différents thèmes abordés.
 
 |Modules/Matières | Sujets abordés                    |
 |:-:              |:-:                                |
