@@ -12,7 +12,9 @@ Découvrez ici tous mes TP que j'ai pu faire lors de mon DUT informatique à l'i
 | WIM1.2          | Exercices en HTML et CSS          |  
 | WIM2.1          | PHP                               | 
 | SGBD1.1         | Découvertes des bases en SQL      |  
-| SGBD1.2         | Utilisation des triggers, des fonctions                                |  
+| SGBD2.1         | Utilisation des triggers, des fonctions et des procédures |  
+| SGBD2.2         | Conversion des diagrammes de classes en requêtes SQL |
 
 
-mis à jour le 21/11/2020
+
+mis à jour le 09/03/2020
