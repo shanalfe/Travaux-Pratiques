@@ -2,7 +2,7 @@
 
 Découvrez ici tous mes TP que j'ai pu faire lors de mon DUT informatique à l'iut de Fontainebleau (77). Dans le tableau ci-dessous, les différents modules en fonction des matières avec les sujets traités.
 
-|Modules/Matières | APL                               |    ASR                         |WIMS                       |SGBD                                        |
+|Modules/Matières | Sujets abordés                              |    ASR                         |WIMS                       |SGBD                                        |
 |:-:              |:-:                                |:-:                             |:-:                        | :-:                                        |
 | APL1.1          | Bases du langage C                | x                              |x                          |  x                                         |
 | APL1.2          | Approfondissement du langage C    | x                              |x                          |  x                                         |
