@@ -4,12 +4,13 @@ Découvrez ici tous mes TP que j'ai pu faire lors de mon DUT informatique à l'i
 
 |Modules/Matières | Sujets abordés                    |
 |:-:              |:-:                                |
-| Premier semestre                                    |
+|                 |Premier semestre                   |
 | APL1.1          | Bases du langage C                | 
 | APL1.2          | Approfondissement du langage C    |
 | ASR1.2          | Exercices programmes en Shell     |                   
 | WIM1.2          | Exercices en HTML et CSS          |  
 | SGBD1.1         | Découvertes des bases en SQL      |  
+|                 |Deuxième semestre                   |
 | APL2.1          | Java                              |  
 | WIM2.1          | PHP                               | 
 | SGBD2.1         | Utilisation des triggers, des fonctions et des procédures |  
