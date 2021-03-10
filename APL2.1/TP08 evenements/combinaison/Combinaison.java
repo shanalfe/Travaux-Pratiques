@@ -5,6 +5,10 @@ import java.awt.event.*;
 /**
 * utilisation de implements car on hérite d'une classe (main) mais on réalise une interface
 *
+*Permet de voir la derniere case cochée
+*if (source == magenta){
+			panneau.setBackground(Color.MAGENTA);
+		}
 */
 
 
@@ -15,21 +19,12 @@ public class Combinaison implements ItemListener {
 	private JCheckBox jaune;
 	private JCheckBox magenta;
 
-	public Combinaison(JPanel panel) {
+	public Combinaison(JPanel panel, JCheckBox cy, JCheckBox ja, JCheckBox ma) {
 		this.panneau = panel;
-	}	
-
-	public Combinaison (JCheckBox cy){
 		this.cyan = cy;
-	}
-	public Combinaison (JCheckBox ja){
 		this.jaune = ja;
-	}
-	public Combinaison (JCheckBox ma){
 		this.magenta = ma;
 	}
-
-	
 
 	/*--- Création de l'évènement ---*/
 
@@ -40,27 +35,23 @@ public class Combinaison implements ItemListener {
 		/*récupérer la référence à cette case */
 		JCheckBox source = (JCheckBox) e.getSource();
 
-		/** Transtypage */
-		
 
-		
-		/*Comparaison*/ 		
-		if( source == cyan ) {
-			panneau.setBackground(Color.CYAN);
-		}
-
-		if (source == jaune){
+		if (jaune.isSelected() ){
 			panneau.setBackground(Color.YELLOW);
 		}
 
-		if (source == magenta){
+		if (magenta.isSelected() ){
 			panneau.setBackground(Color.MAGENTA);
 		}
 
-		if ( (source == magenta) && (source == cyan) && (source == jaune) ){
-			panneau.setBackground(Color.BLACK);
+
+		if (cyan.isSelected() ){
+			panneau.setBackground(Color.CYAN);
 		}
 
+		if ( (cyan.isSelected() ) && (jaune.isSelected() ) && (magenta.isSelected() ) ){
+			panneau.setBackground(Color.BLACK);
+		}
 
 	}
 

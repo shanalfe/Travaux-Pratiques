@@ -1,8 +1,15 @@
+/**
+* @version 1.1 
+* @author Shana Lefèvre
+*/
+
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
 public class Main {
+
 	public static void main(String[] args) {
 		
 		JFrame fenetre = new JFrame();
@@ -24,7 +31,7 @@ public class Main {
 		fenetre.add(panneau, BorderLayout.CENTER);
 
 
-		Combinaison a = new Combinaison(panneau);
+		Combinaison a = new Combinaison(panneau, cyan, jaune, magenta);
 	
 		/*--- Aj ---*/
 		cyan.addItemListener(a);
