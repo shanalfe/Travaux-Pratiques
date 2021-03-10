@@ -1,3 +1,8 @@
+/**
+Classe cercle qui gère JUSTE le coté graphique
+*/
+
+
 import javax.swing.*;
 import java.awt.*;
 import javax.swing.JComponent;
@@ -12,6 +17,9 @@ public class Cercle extends JComponent {
 		this.setPreferredSize (new Dimension (500,100));
 	}
 
+	/**
+	Méthode upV qui augmente la coloration des points
+	*/
 	public void upV (){
 		if (v !=9){
 			v ++;
@@ -19,6 +27,9 @@ public class Cercle extends JComponent {
 		}
 	}
 
+	/**
+	Méthode dwV qui enlève la coloration des points
+	*/
 	public void dwV (){
 		if (v!=0){
 			v--;
@@ -27,25 +38,28 @@ public class Cercle extends JComponent {
 	}
 
 	@Override
+
 	protected void paintComponent (Graphics c){
+
+		int x1, x2;
+
 		Graphics p = c.create ();
 
-		if (this.isOpaque()){			
-			p.setColor(this.getBackground());
-			p.fillRect(0,0,this.getWidth(), this.getHeight());
+		if ( this.isOpaque() ){			
+			p.setColor( this.getBackground() );
+			p.fillRect( 0,0,this.getWidth(), this.getHeight() );
 		}
 
 		p.setColor (Color.YELLOW);
-		int x1, x2;
-
-		for (x1=0; x1<v; x1++){
-			p.fillOval (5*(x1+1)+ (this.getWidth()*x1/10), 25, 50,50);
+		
+		for ( x1 = 0 ; x1 < v ; x1 ++ ) {
+			p.fillOval (5*(x1+1) + ( this.getWidth()*x1/10 ), 25, 50,50 );
 		}
 
 		p.setColor (Color.GRAY);
 
-		for (x2 = x1; x2<9; x2++){
-			p.fillOval (5*(x2+1)+ (this.getWidth()*x2/10), 25, 50,50);
+		for ( x2 = x1 ; x2 < 9; x2 ++ ) {
+			p.fillOval ( 5*(x2+1) + ( this.getWidth()*x2/10 ), 25, 50,50 );
 		}
 	}
 }
