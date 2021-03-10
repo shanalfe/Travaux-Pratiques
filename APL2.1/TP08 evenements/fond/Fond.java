@@ -3,11 +3,14 @@ import java.awt.*;
 import java.awt.event.*;
 
 /**
+*@version 1.0
+*@author Shana LEFEVRE
 * utilisation de implements car on hérite d'une classe (main) mais on réalise une interface
 * Création d'une classe Fond qui permet la création d'un panneau pour les couleurs
-* equal utilisé comme booleen
+* Method summary booleen equals : equals (Object obj)
 * ActionEvent décrit la source et les circonstances de l'évènement
-* getActionCommand renvoie le texte du bouton qui est nommé dans Main
+* Method summary string getActionCommand () : 
+*	renvoie le texte du bouton qui est nommé dans Main
 */
 
 

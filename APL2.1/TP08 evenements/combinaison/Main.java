@@ -1,6 +1,7 @@
 /**
 * @version 1.1 
 * @author Shana Lefèvre
+* 
 */
 
 
@@ -21,23 +22,19 @@ public class Main {
 		JCheckBox jaune = new JCheckBox("Jaune");
 		JCheckBox magenta = new JCheckBox("Magenta");		
 		JPanel panneau = new JPanel();
-
 		
 		panneau.add(cyan);
 		panneau.add(jaune);
 		panneau.add(magenta);
 
-
 		fenetre.add(panneau, BorderLayout.CENTER);
-
 
 		Combinaison a = new Combinaison(panneau, cyan, jaune, magenta);
 	
-		/*--- Aj ---*/
+		/*--- Ajout evenement ---*/
 		cyan.addItemListener(a);
 		jaune.addItemListener(a);
 		magenta.addItemListener(a);
-
 
 		fenetre.setVisible(true);
 
