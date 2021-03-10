@@ -35,7 +35,6 @@ public class Combinaison implements ItemListener {
 		/*récupérer la référence à cette case */
 		JCheckBox source = (JCheckBox) e.getSource();
 
-
 		if (jaune.isSelected() ){
 			panneau.setBackground(Color.YELLOW);
 		}
@@ -43,7 +42,6 @@ public class Combinaison implements ItemListener {
 		if (magenta.isSelected() ){
 			panneau.setBackground(Color.MAGENTA);
 		}
-
 
 		if (cyan.isSelected() ){
 			panneau.setBackground(Color.CYAN);
