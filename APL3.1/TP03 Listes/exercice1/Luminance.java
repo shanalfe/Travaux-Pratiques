@@ -9,7 +9,7 @@ public class Luminance extends JComponent {
    
 
     private Polygon poly;
-
+		private Polygon polyy;
     int d = 2, i = 1;
 
 
@@ -33,7 +33,11 @@ public class Luminance extends JComponent {
             p.setColor (Color.BLACK);
             p.drawPolygon(poly);
 					
-				
+						//test 2e parall
+						int xxPoly[] = {120, 210, 150,60};
+						int yyPoly[] = {30,30,300,300};
+						polyy = new Polygone(xxPoly, yyPoly, xxPoly.length);
+						p.drawPolygon(polyy);
         //}
             
             
