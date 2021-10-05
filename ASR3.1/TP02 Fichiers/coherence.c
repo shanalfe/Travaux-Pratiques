@@ -28,7 +28,7 @@ void read_using_syscalls()
 
 	// read first 12 bytes
 	char buf[BUFSIZ];
-	ssize_t nr1 = read(fd, buf, 12);
+	ssize_t nr1 = read(fd, buf, 12); // lit les 12e octets
 	assert(nr1 >= 0);
 
 	write_asr_c_bien();
@@ -46,6 +46,7 @@ void read_using_stdio()
 
 	// open stdio file
 	FILE* f = fopen(TESTFILE, "r");
+	//setvbuf (f, NULL, _IONBF, 0); // je ne veux pas que tu beuffeursise
 
 	// read first 12 bytes
 	char buf[BUFSIZ];
