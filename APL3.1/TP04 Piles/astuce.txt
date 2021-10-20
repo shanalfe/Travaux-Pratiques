@@ -1,0 +1,4 @@
+commande vim :
+
+pour tout afficher vite : zR
+supprmier un mot : dw
