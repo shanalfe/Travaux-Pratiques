@@ -2,7 +2,7 @@
 
 Découvrez ici tous mes TP que j'ai pu faire lors de mon DUT informatique à l'iut de Fontainebleau (77). Dans le tableau ci-dessous, les différents modules avec ses différents thèmes abordés.
 
-|Modules/Matières | Sujets abordés                    | Lien sujet                        |
+|Modules/Matières | Sujets abordés                    | Liens sujets                      |
 |:-:              |:-:                                |:-:                                |
 |                 |Premier semestre                   |                                   |
 | APL1.1          | Bases du langage C                | http://www.iut-fbleau.fr/sitebp/apl11/ |
