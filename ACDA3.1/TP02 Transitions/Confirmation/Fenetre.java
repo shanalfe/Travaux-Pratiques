@@ -1,11 +1,20 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.*;
 
+
+/**
+* Class Fenetre vue principale de l'application.
+*/
 public class Fenetre extends JFrame {
 	
 	private CardLayout diapo;
 	private JPanel picture;
+	private JFrame fenetre;
 
+	/**
+		Méthode Fenetre 
+	*/
 	public Fenetre () {
 		
 		this.setSize(500,500);
@@ -39,7 +48,11 @@ public class Fenetre extends JFrame {
 		Event event = new Event (diapo, picture);
 		picture.addMouseListener(event);
 
-
+		EventQuit eventQuit = new EventQuit (quit, fenetre);
+		quit.addActionListener(eventQuit);
+		
 		
 	}
+
+
 }
