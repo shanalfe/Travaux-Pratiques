@@ -12,6 +12,8 @@ Deux versions de cette application sont demandées :
 - une version où la fenêtre contient un seul JLabel remplacé à chaque transition,
 - une version où la fenêtre contient tous les JLabel, avec un CardLayout pour décider lequel est visible.
 
+Le répertoire réponse se trouve [ici](https://github.com/shanalfe/Travaux-Pratiques/tree/master/ACDA3.1/TP02%20Transitions/Confirmation)
+
 ## Exercice 2
 
 <u>Confirmation</u>. 
