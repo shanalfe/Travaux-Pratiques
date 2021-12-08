@@ -7,8 +7,7 @@ public class Choix extends JFrame {
 	private JButton oui;
 	private JButton non;
 	private JDialog dialog;
-	private JPanel boutonConfirmation;
-
+	
 
 	/**
 	* Méthode Choix
@@ -33,7 +32,7 @@ public class Choix extends JFrame {
 		JButton non = new JButton ("Non");
 		boutonConfirmation.add(non, BorderLayout.EAST);
 
-		EventChoix eventChoix = new EventChoix (oui, non, dialog, boutonConfirmation);
+		EventChoix eventChoix = new EventChoix (oui, non, dialog);
 		oui.addActionListener(eventChoix);
 		non.addActionListener(eventChoix);
 

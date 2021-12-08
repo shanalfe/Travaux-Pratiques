@@ -11,15 +11,14 @@ public class EventChoix implements ActionListener {
 	private JButton oui;
 	private JButton non;
 	private JDialog dialog;	
-	private JPanel boutonConfirmation;
+	
 
-
-	public EventQuit(JButton o, JButton n, JDialog d, JPanel bc) {
+	public EventChoix(JButton o, JButton n, JDialog d) {
 
 		this.oui = o;
 		this.non = n;
 		this.dialog = d;
-		this.boutonConfirmation = bc;
+		
 		
 	}
 
@@ -29,10 +28,10 @@ public class EventChoix implements ActionListener {
 		Object ae = e.getSource(); 
 
         if(ae == oui) {
-        	//System.exit (0);
+        	System.exit (0);
         	System.out.println ("Fermer");
         } else if (ae == non) {
-        	//d.dispose();
+        	dialog.dispose();
         	System.out.println ("RIenf aire");
         }
 	}

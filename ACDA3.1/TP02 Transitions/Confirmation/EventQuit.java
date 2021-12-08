@@ -9,13 +9,12 @@ import java.awt.event.*;
 public class EventQuit implements ActionListener {
 
 	private JButton quit;
-	private JFrame fenetre;
+
 
 
 	public EventQuit(JButton q, JFrame f) {
 
 		this.quit = q;
-		this.fenetre = f;
 		
 	}
 

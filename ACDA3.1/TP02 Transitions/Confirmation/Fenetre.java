@@ -48,7 +48,7 @@ public class Fenetre extends JFrame {
 		Event event = new Event (diapo, picture);
 		picture.addMouseListener(event);
 
-		EventQuit eventQuit = new EventQuit (quit, fenetre);
+		EventQuit eventQuit = new EventQuit (quit, this);
 		quit.addActionListener(eventQuit);
 		
 		
