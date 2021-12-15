@@ -1,0 +1,11 @@
+création du dossier build
+javac -d build -classpath build -sourcepath "src" projet/*.java
+java -classpath build projet.Main
+
+pour créer l'archive :
+jar cvfe projet.jar projet.Main -C build projet -C res images
+				<nom archive><point d'entré>  -C <les autres packages>
+
+pour exécuter l'archive :
+
+java -jar projet.jar

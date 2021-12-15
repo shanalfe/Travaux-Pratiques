@@ -1,0 +1,3 @@
+création du dossier build
+javac -d build -classpath build -sourcepath "src" projet/*.java
+java -classpath build projet.Main
