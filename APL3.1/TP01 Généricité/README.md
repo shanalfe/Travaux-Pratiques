@@ -16,17 +16,9 @@ Remarque Comparator<T> est en fait une interface, vous devrez donc trouver dans 
 On souhaite concevoir une méthode qui prend un tableau en argument et renvoie l'élément qui s'y répète le plus. En cas d'égalité, l'élément d'indice le plus faible sera privilégié. Cette méthode devra marcher pour des tableaux contenant tous types d'objet.
 
 4. Association. La méthode de l'exercice précédent ne donne pas toutes les informations que l'on pourrait désirer. Pour lui permettre de renvoyer à la fois l'élément le plus répété et sa fréquence (le nombre de répétition), on va construire une classe Association contenant un élément (de type variable) et une fréquence (de type entier). Il faudra prévoir des accesseurs pour chaque attribut, un constructeur et une surcharge de la méthode toString. Dans un diagramme de classe, ça se représenterait ainsi :
+ 
+![image](https://user-images.githubusercontent.com/69315804/151235703-60eecfcb-7605-4b6d-aee1-df48fa98489f.png)
 
- 	 	 	 	E
- 	 	Association	 
- 	 	 	 	 
-- element : E
-- frequence : entier	 
-+ getElement() : E
-+ setElement(in elt : E)
-+ getFrequence() : entier
-+ setFrequence(in f : entier)
-+ toString() : String	 
 
 5. Fréquences. 
 
