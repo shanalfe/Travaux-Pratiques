@@ -48,7 +48,7 @@ public class Arithmetique {
 				liste.pop();
 				int nb1 = Integer.parseInt(liste.pop());
 				int nb2 = Integer.parseInt(liste.pop());
-				String res = String.valueOf(nb1 / nb2);				
+				String res = String.valueOf(nb2 / nb1);				
 				liste.push(res);
 				
 			
