@@ -1,3 +1,5 @@
+import java.awt.Color;
+
 /**
  * Stores a user-supplied question along with the randomly generated answer.
  *
@@ -9,6 +11,7 @@
 public class QuestionAndAnswer {
   private String answer;
   private String question;
+  private Color color;
 
   /**
    * Constructs a <code>QuestionAndAnswer</code> object containing the
@@ -19,9 +22,10 @@ public class QuestionAndAnswer {
    * @param  a
    *         the answer
    */
-  public QuestionAndAnswer(String q, String a) {
+  public QuestionAndAnswer(String q, String a, Color p_color) {
     question = q.split("\\s*\\?",2)[0];
     answer = a;
+    this.color = p_color;
   }
 
   /**
@@ -32,5 +36,9 @@ public class QuestionAndAnswer {
    */
   public String toString() {
     return question + " ? " + answer + ".";
+  }
+
+  public Color getColor() {
+    return this.color;
   }
 }

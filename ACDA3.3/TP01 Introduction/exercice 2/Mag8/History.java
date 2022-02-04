@@ -1,6 +1,7 @@
 import java.util.Random;
 import java.util.Arrays;
-import java.awt.Label;
+import java.awt.*;
+import javax.swing.*;
 
 /**
  * A repository for all answers to the user's questions
@@ -38,12 +39,13 @@ public class History {
     "Outlook not so good",
     "Very doubtful"
   };
+
   private static final int CAPACITY_INITIAL = 50;
   private static final int CAPACITY_INCREMENT = 20;
   private int currentSelection;
   private int size;
   private QuestionAndAnswer[] list;
-  private Label view;
+  private JLabel view;
   private Random rng;
 
   /**
@@ -53,7 +55,7 @@ public class History {
    * @param  v
    *         the view element that displays answers
    */
-  public History(Label v) {
+  public History(JLabel v) {
     currentSelection = -1;
     size = 0;
     list = new QuestionAndAnswer[CAPACITY_INITIAL];
@@ -69,8 +71,10 @@ public class History {
    */
   public void generate(String question) {
     int choice = rng.nextInt(PossibleAnswers.length);
+
+    Color color = colorView(choice);
     QuestionAndAnswer qna = new QuestionAndAnswer(question,
-                                                  PossibleAnswers[choice]);
+                                                  PossibleAnswers[choice], color);
 
     if (size >= list.length)
       list = Arrays.copyOf(list, list.length + CAPACITY_INCREMENT);
@@ -107,6 +111,22 @@ public class History {
    * Sends updated information to be displayed.
    */
   protected void refreshView() {
+    view.setBackground(list[currentSelection].getColor());
     view.setText((currentSelection + 1) +") " + list[currentSelection].toString());
+  }
+
+  protected Color colorView(int offset) {
+    Color color = Color.RED;
+
+    if( (offset+1) <= 10) {
+      color = Color.GREEN;
+    }
+    else if( (offset+1) <=15 ) {
+      color = Color.ORANGE;
+    }
+
+    view.setBackground(color);
+
+    return color;
   }
 }
