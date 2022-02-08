@@ -73,8 +73,7 @@ public class History {
     int choice = rng.nextInt(PossibleAnswers.length);
 
     Color color = colorView(choice);
-    QuestionAndAnswer qna = new QuestionAndAnswer(question,
-                                                  PossibleAnswers[choice], color);
+    QuestionAndAnswer qna = new QuestionAndAnswer(question, PossibleAnswers[choice], color);
 
     if (size >= list.length)
       list = Arrays.copyOf(list, list.length + CAPACITY_INCREMENT);
@@ -115,6 +114,9 @@ public class History {
     view.setText((currentSelection + 1) +") " + list[currentSelection].toString());
   }
 
+  /*Création de la méthode colorView pour quelle couleur est attribuéel
+  *@return color
+  */
   protected Color colorView(int offset) {
     Color color = Color.RED;
 
