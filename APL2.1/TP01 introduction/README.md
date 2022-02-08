@@ -30,8 +30,6 @@ import java.util.Arrays;
 Écrivez un programme qui affiche une grille dont la taille est donnée sur la ligne de commande.
 
 bob@box:~$ java Grille 2
-+-+-+
-| | |
-+-+-+
-| | |
-+-+-+
+
+![image](https://user-images.githubusercontent.com/69315804/153001855-68fac0e6-b83e-4bdb-8eff-731ac59891bd.png)
+
