@@ -5,7 +5,7 @@ Les liens des sujets sont disponibles dans les dépôts respectifs.
 
 
 
-| Modules /Matières | Sujets abordés                 | Liens sujets                           | Répertoire                                                   |
+| Modules /Matières | Sujets abordés                 | Liens sujets                           | Répertoire GIT                                               |
 | :---------------: | ------------------------------ | -------------------------------------- | ------------------------------------------------------------ |
 |      APL1.1       | Bases du langage C             | http://www.iut-fbleau.fr/sitebp/apl11/ | https://github.com/shanalfe/Travaux-Pratiques/tree/master/APL1.1 |
 |      APL1.2       | Approfondissement du langage C | http://www.iut-fbleau.fr/sitebp/apl12/ | https://github.com/shanalfe/Travaux-Pratiques/tree/master/APL1.2 |
