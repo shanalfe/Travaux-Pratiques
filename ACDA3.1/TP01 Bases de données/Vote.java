@@ -15,7 +15,7 @@ public class Vote {
 			// Connexion à la BD
 			try {
 
-				Connection cnx = DriverManager.getConnection("jdbc:mariadb://dwarves.iut-fbleau.fr/lefevres", "lefevres", "Amd41");
+				Connection cnx = DriverManager.getConnection("jdbc:mariadb://dwarves.iut-fbleau.fr/lefevres", "lefevres", "");
 				System.out.println("Connection validate");
 
 				if (args.length == 0) {
