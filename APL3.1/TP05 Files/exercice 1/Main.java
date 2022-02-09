@@ -1,6 +1,7 @@
 import java.lang.Object.*;
 import java.util.*;
 
+
 public class Main {
 
 
@@ -37,9 +38,9 @@ public class Main {
 		Queue<Integer> q1 = new LinkedList<Integer>();
 		Queue<Integer> q2 = new LinkedList<Integer>();
 		
-		while (! q.isEmpty() && bool == true) {
+		while (! q.isEmpty() && bool == true ) {
 
-			if (q.isEmpty() ) {
+			if (bool == false) {
 
 				bool = false; // On sort de la boucle
 
@@ -48,10 +49,14 @@ public class Main {
 				a = q.remove();
 				q1.add(a);
 
-				b = q.remove();
-				q2.add(b);
+				if (! q.isEmpty() && bool == true ) {
+					b = q.remove();
+					q2.add(b);
 
-				bool = true;
+				} else {
+
+					bool = false; // On sort de la boucle
+				}
 
 			}
 
@@ -59,6 +64,12 @@ public class Main {
 
 		System.out.println ("Q1 : " + q1);
 		System.out.println ("Q2 : " + q2);
+		System.out.println("Premier tri");
+		Trier(q1);
+		/*System.out.println("Deuxieme tri");
+		Trier(q2);*/
+		
+
 
 	}
 
@@ -66,7 +77,57 @@ public class Main {
 	* Deuxième phase : tri de chaque moitié (par deux appels récursifs),
 	* ALGO : On récupère les 2 files, et on les tri en ordre croissant respectivement
 	*/
-	public void Trier () {
+	public static void Trier (Queue<Integer> q)  {
+		int a;
+		int b;
+		boolean bool = false;
+		System.out.println (q);
+
+		Queue<Integer> q_tri = new LinkedList<Integer>();
+
+		while(! q.isEmpty() ) {
+			
+			if (bool == false) {
+				a = q.remove();
+			} else  {
+				a = q_tri.remove();
+			}
+			
+			
+			//débogage
+			System.out.println ("-" +a);
+			System.out.println (q);
+
+			if (! q.isEmpty()){
+				b = q.remove();
+				System.out.println ("-" +b);
+			
+
+				if (a > b) {
+					System.out.println("a : "+a + " b : "+b);
+					q_tri.add(b);
+					q_tri.add(a);
+					System.out.println("New : " +q_tri);
+					System.out.println("Ancien : " +q);
+					bool = true;
+
+				} else if (a < b) {
+					System.out.println("a : "+a + " b : "+b);
+					q_tri.add(a);
+					q_tri.add(b);					
+					System.out.println("New : " +q_tri);
+					System.out.println("Ancien : " +q);
+					bool = true;
+				}
+
+			} else {
+				q_tri.add(a);
+			}
+
+		}
+
+		System.out.println(q_tri);
+		
 
 	}
 
