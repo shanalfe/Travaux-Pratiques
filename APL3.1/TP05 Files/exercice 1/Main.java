@@ -70,7 +70,6 @@ public class Main {
 		Trier(q2);*/
 		
 
-
 	}
 
 	/**
