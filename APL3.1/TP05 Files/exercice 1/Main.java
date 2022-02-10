@@ -4,13 +4,11 @@ import java.util.*;
 
 public class Main {
 
-
 	/**
 	*Main
 	* enqueue = add
 	*/
 	public static void main(String[] args) {
-
 
 		Queue<Integer> q = new LinkedList<Integer>();
 	
@@ -18,8 +16,8 @@ public class Main {
 
 		System.out.println (q);
 
-		Scinder(q);
-
+		Main t = new Main ();
+		t.Trier(q);
 
 	}
 
@@ -29,7 +27,7 @@ public class Main {
 	* ALGO : métaphore : paquet carte : on distribut a l'un puis à l'autre jusqu'a la fin
 	* dequeue = remove
 	*/
-	public static void Scinder (Queue<Integer> q) {
+	public List<Queue<Integer>> Scinder (Queue<Integer> q) {
 
 		int a,
 			b;
@@ -37,6 +35,7 @@ public class Main {
 
 		Queue<Integer> q1 = new LinkedList<Integer>();
 		Queue<Integer> q2 = new LinkedList<Integer>();
+		List<Queue<Integer>> list = new ArrayList<>(); 
 		
 		while (! q.isEmpty() && bool == true ) {
 
@@ -64,69 +63,42 @@ public class Main {
 
 		System.out.println ("Q1 : " + q1);
 		System.out.println ("Q2 : " + q2);
-		System.out.println("Premier tri");
-		Trier(q1);
-		/*System.out.println("Deuxieme tri");
-		Trier(q2);*/
 		
+		list.add(q1);
+		list.add(q2);
 
+		return list;
 	}
+
 
 	/**
 	* Deuxième phase : tri de chaque moitié (par deux appels récursifs),
 	* ALGO : On récupère les 2 files, et on les tri en ordre croissant respectivement
+	* remove-> supprimer
+	* get -> récupérer
+	* On met les indices, car on travaille avec des files
 	*/
 	public static void Trier (Queue<Integer> q)  {
-		int a;
-		int b;
-		boolean bool = false;
-		System.out.println (q);
+		int a, b;
+		Main s = new Main ();
+		List<Queue<Integer>> list = s.Scinder(q);
 
-		Queue<Integer> q_tri = new LinkedList<Integer>();
+		if (!list.isEmpty()) {
+			Queue<Integer> q1 = list.get (0);
+			Queue<Integer> q2 = list.get (1);
+			System.out.println(q1);
+			System.out.println(q2);
+		}	
 
-		while(! q.isEmpty() ) {
-			
-			if (bool == false) {
-				a = q.remove();
-			} else  {
-				a = q_tri.remove();
-			}
-			
-			
-			//débogage
-			System.out.println ("-" +a);
-			System.out.println (q);
 
-			if (! q.isEmpty()){
-				b = q.remove();
-				System.out.println ("-" +b);
-			
 
-				if (a > b) {
-					System.out.println("a : "+a + " b : "+b);
-					q_tri.add(b);
-					q_tri.add(a);
-					System.out.println("New : " +q_tri);
-					System.out.println("Ancien : " +q);
-					bool = true;
 
-				} else if (a < b) {
-					System.out.println("a : "+a + " b : "+b);
-					q_tri.add(a);
-					q_tri.add(b);					
-					System.out.println("New : " +q_tri);
-					System.out.println("Ancien : " +q);
-					bool = true;
-				}
 
-			} else {
-				q_tri.add(a);
-			}
 
-		}
+	
 
-		System.out.println(q_tri);
-		
+
+
 
 	}
 
@@ -136,6 +108,8 @@ public class Main {
 	* ALGO : on compare la x ieme d'une file et la x ieme del'autre file. On ajoute la plus petite dans dans la nouvelle file
 	*/
 	public void Fusionner () {
+
+
 
 	}
 
