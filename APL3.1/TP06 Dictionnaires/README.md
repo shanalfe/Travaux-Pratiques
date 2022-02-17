@@ -5,6 +5,9 @@ Employez la méthode getAllStackTraces de la classe Thread afin d'écrire une ap
 
 ![image-20220217191823582](/home/shanou/snap/typora/49/.config/Typora/typora-user-images/image-20220217191823582.png)
 
+![image](https://user-images.githubusercontent.com/69315804/154546038-d8cdf390-d4ca-4883-a096-23e8d3635793.png)
+
+
 2 Couleurs. 
 Le fichier rgb.txt est une version du fichier qui permet le choix des couleurs dans un serveur X. Écrivez une application qui lit dans ce fichier et ouvre une fenêtre contenant une liste non déroulante (JList<E>) et un panneau. La liste offrira le choix entre tous les noms de couleur définis dans le fichier, et sélectionner l'un de ces noms provoquera la coloration du panneau en conséquence.
 
