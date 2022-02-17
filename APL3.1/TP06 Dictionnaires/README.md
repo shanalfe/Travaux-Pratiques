@@ -1,11 +1,21 @@
 1. Traces. 
 Employez la méthode getAllStackTraces de la classe Thread afin d'écrire une application qui affiche à la console le nom de tous les processus en cours ainsi que la pile des appels de chacun.
 
+```
+bob@box:~$ java Traces
+Finalizer :
+  java.lang.Object.wait(Native Method)
+  java.lang.ref.ReferenceQueue.remove(Unknown Source)
+  java.lang.ref.ReferenceQueue.remove(Unknown Source)
+  java.lang.ref.Finalizer$FinalizerThread.run(Unknown Source)
 
+main :
+  java.lang.Thread.dumpThreads(Native Method)
+  java.lang.Thread.getAllStackTraces(Unknown Source)
+  Question1.main(Question1.java:6)
 
-![image-20220217191823582](/home/shanou/snap/typora/49/.config/Typora/typora-user-images/image-20220217191823582.png)
-
-![image](https://user-images.githubusercontent.com/69315804/154546038-d8cdf390-d4ca-4883-a096-23e8d3635793.png)
+...
+```
 
 
 2 Couleurs. 
@@ -15,7 +25,8 @@ Le fichier rgb.txt est une version du fichier qui permet le choix des couleurs d
 
 
 
-![image-20220217191920574](/home/shanou/snap/typora/49/.config/Typora/typora-user-images/image-20220217191920574.png)
+
+![image](https://user-images.githubusercontent.com/69315804/154546038-d8cdf390-d4ca-4883-a096-23e8d3635793.png)
 
 
 
