@@ -1,3 +1,5 @@
+Dictionnaires
+
 1. Traces. 
 Employez la méthode getAllStackTraces de la classe Thread afin d'écrire une application qui affiche à la console le nom de tous les processus en cours ainsi que la pile des appels de chacun.
 
