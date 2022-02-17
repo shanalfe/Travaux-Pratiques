@@ -43,7 +43,8 @@
 
 4. **Formules.** Écrivez un programme qui affiche le résultat de chacune de ces formules :
 
-   ![image-20220218004238261](/home/shanou/snap/typora/49/.config/Typora/typora-user-images/image-20220218004238261.png)
+![image](https://user-images.githubusercontent.com/69315804/154590321-4218e58a-637e-446c-a8b8-cb17452d4d4e.png)
+
 
    
 
