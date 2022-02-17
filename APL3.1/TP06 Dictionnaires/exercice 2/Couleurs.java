@@ -23,8 +23,8 @@ public class Couleurs {
 
 				while((ligne = lecture.readLine()) != null) {
 
-					String[] arrOfStr = ligne.split(" "); //séparation	
-					
+					String[] arrOfStr = ligne.split("\\s", +); //séparation pour condition : caractère blanc et au moins 1
+
 					System.out.println(Arrays.toString(arrOfStr)); 
 				}
 
