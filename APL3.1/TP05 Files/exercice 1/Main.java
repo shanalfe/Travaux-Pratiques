@@ -90,6 +90,7 @@ public class Main {
 			System.out.println(q2);
 		}	
 
+		
 
 
 
@@ -109,7 +110,7 @@ public class Main {
 	*/
 	public void Fusionner () {
 
-
+		
 
 	}
 
