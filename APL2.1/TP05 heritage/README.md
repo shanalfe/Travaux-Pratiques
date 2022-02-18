@@ -2,19 +2,7 @@
 
     
 
-   La description de l'API Java est disponible
-
-    
-
-   en version locale
-
-    
-
-   ou
-
-    
-
-   sur le site d'Oracle
+   La description de l'API Java est disponible en version local ou sur le site d'Oracle
 
    . Utilisez cette documentation pour répondre aux questions suivantes :
 
