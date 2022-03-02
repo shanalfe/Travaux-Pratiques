@@ -1,16 +1,23 @@
-import javax.swing.JFrame;
-import java.awt.Dimension;
+import java.awt.*;
+import java.util.*;
+import javax.swing.*;
 
-
+/**
+ * Classe <Fenetre>
+ * C'est la vue du programme
+ */
 public class Fenetre extends JFrame {
 
-	public Fenetre () {
+    /**
+     * Constructeur Fenetre
+     */
+    public Fenetre() {
 
-		JFrame fenetre = new JFrame ();	
-		fenetre.setPreferredSize(new Dimension(300, 200));
-      	fenetre.setLocation(100,100);
-      	fenetre.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-      	fenetre.setVisible (true);
-	}
+        super("Dessin");
+        this.add(new Dessin (), BorderLayout.CENTER);
+        this.pack();
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setVisible(true);
 
+    }
 }
