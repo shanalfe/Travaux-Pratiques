@@ -1,11 +1,16 @@
-création du dossier build
+Notes ACDA.3.1-TP04 Organisation de code
+
+création du dossier build et src dans le dossier du projet : mkdir build et mkdir src
+
 javac -d build -classpath build -sourcepath "src" projet/*.java
 java -classpath build projet.Main
+
+ATTENTION : On n'oublie pas d'indique le chemin du package au TOUT DÉBUT DU FICHIER
+Ex : package projet
 
 pour créer l'archive :
 jar cvfe projet.jar projet.Main -C build projet -C res images
 				<nom archive><point d'entré>  -C <les autres packages>
 
 pour exécuter l'archive :
-
 java -jar projet.jar
