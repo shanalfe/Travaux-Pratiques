@@ -7,35 +7,28 @@
 
 
 
-import java.awt.Component;
-import java.awt.Color;
-
-
-
-
 
 public class Fenetre extends javax.swing.JFrame {
   private ClientDepot depot;
+  private ControleColorFenetre control;
   javax.swing.JTextArea zone;
   public Fenetre() {
     depot = new ClientDepot("localhost", 11111);
-    zone = new javax.swing.JTextArea(depot.extraire());
+   /* modifier */  String[] tab = depot.extraire();
+    zone = new javax.swing.JTextArea(tab[0]);
+   /* ajout*/ this.control =  new ControleColorFenetre(zone, Integer.parseInt(tab[1]));
     add(zone);
     addWindowListener(new ControleFenetre());
+  /* ajout */  addMouseWheelListener(this.control);
     setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
     setSize(200, 200);
     setTitle("Memo");
     setLocation(200, 200);
-
-
-    ControleMouse controllerMouse = new ControleMouse();
-
-    zone.addMouseWheelListener(controllerMouse);
-    zone.setBackground(Color.RED);
   }
 
   public void destroy() {
-    depot.entreposer(zone.getText());
+    int position = this.control.getPositionColor();
+   /* modifier */ depot.entreposer(zone.getText(), new Integer(position));
     dispose();
   }
 }
