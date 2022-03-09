@@ -8,6 +8,11 @@ public class Point {
 
     }
 
+    /**
+     * Méthode move 
+     * @param x
+     * @param y
+     */
     public void move (int x, int y) {
 
     }
