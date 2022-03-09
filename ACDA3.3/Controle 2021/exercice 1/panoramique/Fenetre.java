@@ -1,5 +1,9 @@
 import java.awt.*;
 import javax.swing.*;
+
+/**
+ * Class Fenetre
+ */
 public class Fenetre extends JFrame {
 
     public Fenetre() {

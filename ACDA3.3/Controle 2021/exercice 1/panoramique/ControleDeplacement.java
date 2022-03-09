@@ -1,7 +1,8 @@
 import java.awt.event.*;
+import java.awt.Point;
 
 
-public class ControleDeplacement implements MouseListener { //+ implement MouseMotionListener ?
+public class ControleDeplacement implements MouseListener, MouseMotionListener {
     
     private Point position;
 
@@ -9,7 +10,7 @@ public class ControleDeplacement implements MouseListener { //+ implement MouseM
     private int deltaY;
 
     public ControleDeplacement(Point origine) {
-        
+        this.position = origine;
     }
 
 
