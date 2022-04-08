@@ -21,7 +21,7 @@ void arret(int s){
 	/* Arret du serveur
 	 * en detruisant la file 
 	 * de message */	
-
+	msgctl(file_mess, IPC_RMID, NULL);
 }
 
 int set_signal_handler(int signo, void (*handler)(int)) {
@@ -73,15 +73,28 @@ int main (int argc, char *argv[]){
 	while(1){ 
 
 		/* serveur attend des requetes, de type 1 :        */
+		nb_lus = msgrcv (file_mess, &requete, sizeof(requete_t) - sizeof(long),pid, 0);
 
+		
 		/* traitement de la requete :                      */
+		if (nb_lus =! -1) {
+			fprintf(stdout,"(Serveur) Requete recue de %d\n", requete.expediteur);
+		
+			int res = effectuer(requete.op, requete.g, requete.d);
+			
+			fprintf( stdout, "\top = %c, g = %d, d = %d\n", requete.op, requete.g, requete.d);
 
-		/* Attente aleatoire */
+			/* Attente aleatoire */
+			sleep(rand()%3);
 
-		sleep(rand()%3);
+			/* envoi de la reponse :                           */
+			msgsnd(file_mess, &reponse, sizeof(reponse)-sizeof(long),0 );
+			}
 
-		/* envoi de la reponse :                           */
-	}
+
+		}
+
+	
 	exit(0);
 }
 
