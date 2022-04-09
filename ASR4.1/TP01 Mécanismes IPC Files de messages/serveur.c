@@ -55,6 +55,7 @@ int main (int argc, char *argv[]){
 	requete_t requete;
 	reponse_t reponse;
 	ssize_t nb_lus;
+	pid_t pid = getpid(); //rajout
 
 	/* cacul de la cle de la file    */
 	cle = ftok(FICHIER_CLE,'a');
