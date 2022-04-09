@@ -13,7 +13,6 @@
 #include <signal.h>
 #include <assert.h>
 #include "types.h"
-
 void usage(char *s){
     fprintf(stderr,"Usage : %s gauche op droite\n\tgauche, droite : entiers\n\top = +, -, *, /, \%% \n",s);
     exit(-1);
@@ -58,23 +57,29 @@ int main (int argc, char *argv[]){
 	assert(file_mess != -1);
 	
 
-	couleur(BLEU);
+	couleur(CYAN);
 	fprintf(stdout, "\t\tLe client %d envoie : %d %c %d\n", pid, gauche, op, droite);
 	couleur(REINIT);
 
 	/* creation de la requete :          */
-	requete.type = 1;
 	requete.op = op;
-	requete.expediteur = pid;
 	requete.g = gauche;
 	requete.d = droite;
-
+	requete.expediteur = pid;
+	requete.type = 1;
+	/* creation de la requete :          */
+	//
 	/* envoi de la requete :             */
-	msgsnd (file_mess, &requete, sizeof(requete)-sizeof(long), 0);
+	msgsnd(file_mess, &requete, sizeof(requete_t)-sizeof(long), 0);
+	/* envoi de la requete :             */
+	//
 	/* attente de la reponse :           */
 	sleep(rand()%3);
+	/* attente de la reponse :           */
+	//
 	/* affichage de la reponse           */
-	res_rcv = msgrcv (file_mess, &reponse, sizeof(reponse_t)-sizeof(long), pid, 0);
+	res_rcv = msgrcv(file_mess, &reponse, sizeof(reponse_t)-sizeof(long), pid, 0);
+	/* affichage de la reponse           */
 
 	if(res_rcv != -1) {
 
