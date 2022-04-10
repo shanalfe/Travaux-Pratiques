@@ -13,7 +13,7 @@ Une fourmi, assimilable à un petit automate, se promène sur une grille de poin
 - Elle continue son chemin en suivant ces règles.
 
 *Les 9 premiers pas de la fourmi*
-![img](https://dwarves.iut-fbleau.fr/gitiut/FA2_2021/WIM4/media/branch/master/td_tp/tp1/img/fourmi.png)
+![image-20220410153044434](/home/shanou/snap/typora/57/.config/Typora/typora-user-images/image-20220410153044434.png)
 
 Vous disposez des [sources](https://dwarves.iut-fbleau.fr/gitiut/FA2_2021/WIM4/src/branch/master/td_tp/tp1/src/ex1) que vous allez compléter. En particulier, il y a :
 
@@ -34,7 +34,7 @@ Vous disposez des [sources](https://dwarves.iut-fbleau.fr/gitiut/FA2_2021/WIM4/s
 > - Vous allez réutiliser la fonction reset que vous avez écrite précédemment.
 > - La grille est d'une taille minimum de 100.
 
-![img](https://dwarves.iut-fbleau.fr/gitiut/FA2_2021/WIM4/media/branch/master/td_tp/tp1/img/langton.png)
+![image-20220410153141379](/home/shanou/snap/typora/57/.config/Typora/typora-user-images/image-20220410153141379.png)
 
 #### Ex2 : manipulation de tableaux et opérations `filter`, `map` et `reduce`
 
@@ -100,7 +100,9 @@ Vous disposez des [sources](https://dwarves.iut-fbleau.fr/gitiut/FA2_2021/WIM4/s
 
 - la fonction `computeNextGeneration` qui permet de calculer la génération suivante de cellules de la grille.
 
-![img](https://dwarves.iut-fbleau.fr/gitiut/FA2_2021/WIM4/media/branch/master/td_tp/tp1/img/vie.png)
+
+
+![image-20220410153216938](/home/shanou/snap/typora/57/.config/Typora/typora-user-images/image-20220410153216938.png)
 
 - Ajoutez un bouton `reset` qui permet de recommencer le jeu.
 - Ajoutez bouton qui permet d'afficher lors du clic une popin. Vous allez pouvoir renseigner la taille de la grille.
