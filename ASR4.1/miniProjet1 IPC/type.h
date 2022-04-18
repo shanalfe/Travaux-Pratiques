@@ -1,0 +1,1 @@
+#define FICHIER_CLE "fichier.cle"
