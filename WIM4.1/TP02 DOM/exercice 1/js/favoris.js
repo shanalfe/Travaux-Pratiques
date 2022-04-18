@@ -22,10 +22,12 @@ window.addEventListener("load",()=>{
 	
 	/*Création variables*/
 	let body = document.body;
+	/*Création élément ul*/
 	let ul = document.createElement("ul")
 	
 	/*Parcourir le tableau favoris*/
 	for (f of favoris) {
+		/*Création des éléments li et a*/
 		let li = document.createElement("li")
 		let a = document.createElement("a")
 		a.href="https://"+f.url
