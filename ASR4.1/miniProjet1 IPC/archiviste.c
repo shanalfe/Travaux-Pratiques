@@ -6,14 +6,21 @@
 #include <sys/msg.h>
 #include <unistd.h>
 
+#include "type.h"
+
 
 
 int main(int argc, char const *argv[]){
 
+	ssize_t nb_lus;
+	requete_t requete;
+	reponse_t reponse;
 
+
+	/*Attend les requetes*/
 	while (1) {
-		//nb_lus = msgrcv(file_mess, &requete, sizeof(requete_t)-sizeof(long), pid, 0);
-
+		
+		nb_lus = msgrcv(file_mess, &requete, sizeof(requete_t)-sizeof(long), pid, 0);
 
 		if (nb_lus != -1) {
 			/* traitement de la requete :                      */

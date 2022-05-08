@@ -84,6 +84,12 @@ int main(int argc, char const *argv[]){
 			
 			}
 
+			/*Création journaliste à l'infini*/
+			while (1) {
+				cle_fichier = ftok("journaliste.c", 1);
+				assert(cle_fichier != -1);
+			}
+
 			/*Création de segment, chaque thème, un segment*/
 			for (i = 1; i<= nb_themes; i++) {
 				int seg = shmget(cle_fichier, sizeof(long), IPC_CREAT | 0600);
