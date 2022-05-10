@@ -12,6 +12,15 @@
 
 int main(int argc, char const *argv[]){
 
+
+
+
+	int nb_archiviste = atoi(argv[1]);	
+	char demande = argv[2];
+
+
+
+
 	ssize_t nb_lus;
 	requete_t requete;
 	reponse_t reponse;

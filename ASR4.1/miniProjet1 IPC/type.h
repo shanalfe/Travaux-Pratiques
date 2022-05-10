@@ -1,4 +1,9 @@
-#define FICHIER_CLE "fichier.cle"
+
+
+
+
+
+
 
 
 typedef enum { 

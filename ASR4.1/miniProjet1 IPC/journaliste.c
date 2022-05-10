@@ -13,6 +13,18 @@
 
 int main(int argc, char const *argv[]){
 
+	key_t msgKey;
+	int msgId;	
+
+
+	int num_ordre = atoi(argv[1]);	
+	int nb_theme = atoi (argv[2]);
+
+	msgKey = ftok("cles/msgkey.serv", 'a');
+	msgId = msgget(msgKey, IPC_CREAT | 0666);
+
+
+
 	requete_t requete;
 	reponse_t reponse;
 
@@ -22,16 +34,7 @@ int main(int argc, char const *argv[]){
 	char choix;
 
 
-	int nombre = rand() % (10 + 1);
-
-	if(1 <= nombre && nombre <=7 ) {
-		choix = "consultation";
-	} else if(7>nombre && nombre <= 9) {
-		choix = "archivage";
-	} else if (nombre == 10) {
-		choix = "effacemement";
-	}
-
+	
 	
 	cle = ftok(FICHIER_CLE,'a');
 	file_mess = msgget(cle, IPC_CREAT | 0600);

@@ -15,17 +15,33 @@
 #include <sys/shm.h>
 #include <unistd.h>
 #include <sys/types.h>
+#include <sys/sem.h>
+#include <unistd.h>
+
 
 #include "type.h"
 
 /*Déclaration des variables*/
-int file_mess;
+int sgmId,
+	semId,
+	msgId;
 
 
-/*Nettoyage*/
-void arret(int s){	
-	msgctl(file_mess, IPC_RMID, NULL);
+/*--- Nettoyage ---*/
+void arret(){	
+	printf("Fin du programme");
+
+	printf("Fin segment partagé");
+	shmctl(sgmId, IPC_RMID, 0);
+
+	printf("Fin sémaphore");
+	semctl (semId, 0, IPC_RMID);
+
+	printf("Fin file de message");
+	msgctl(msgId, IPC_RMID, 0);
+
 }
+
 
 /*Reception signal arrêter programme*/
 int set_signal_handler(int signo, void (*handler)(int)) {
@@ -39,72 +55,98 @@ int set_signal_handler(int signo, void (*handler)(int)) {
 
 
 
-
 int main(int argc, char const *argv[]){
 
 
-	/*Déclaration des variables*/
+	/*--- Déclaration des variables ---*/
 	int nb_archivistes = 0,
 		nb_themes = 0,
 		i= 1; 
-	key_t cle_fichier;
-//	pid_t pid = getpid();
-	pid_t p;
-	//ssize_t nb_lus;
+	pid_t pid;
+	char buf[64];
+	key_t sgmKey,
+		  semKey,
+		  msgKey;
 
 
-	/*Condition arguments ligne de commande*/
+
+	/*--- Condition arguments ligne de commande ---*/
 	if (argc != 3) {
 		printf("Erreur argument\n");
 		return EXIT_FAILURE;
 	
 	} else {
 
-		/*Conversion en int*/
+
+		/*pour requete*/
+		int nombre = rand() % 10;
+
+		if(0 <= nombre && nombre <=6 ) {
+		choix = "consultation";
+		} else if(nombre <= 8) {
+		choix = 'archivage';
+		} else if (nombre == 9) {
+		choix = 'effacemement';
+		}
+
+
+		/*--- Conversion en int ---*/
 		nb_archivistes = atoi(argv[1]);
 		nb_themes = atoi(argv [2]); 
 
-		/*Condition au moins 2*/
+
+		/*--- Condition au moins 2 ---*/
 		if (nb_archivistes <= 1 || nb_themes<=1) {
 			printf("Erreur nombre\n");
 			return EXIT_FAILURE;
+
 		} else {
+
 			printf("nb_archivistes : %d, nb_themes :%d\n", nb_archivistes, nb_themes);
+
+
+			/*--- Création file de message ---*/
+			msgKey = ftok("cles/msgkey.serv", 'a');
+			msgId = msgget (msgKey, IPC_CREAT | 0600);
+		
+
+
+			/*--- Création de segment, chaque thème, un segment ---*/
+			sgmKey = ftok("cles/sgmkey.serv", 'a');
+			sgmId = shmget(sgmKey, sizeof(int), IPC_CREAT | 0600);
+			
+
+
+			/*--- Création de sémaphore ---*/
+			semKey = ftok("cles/semkey.serv", 'a');
+			semId = semget (semKey, 1, IPC_CREAT | 0666);
+
+			
 			assert(set_signal_handler(SIGINT, arret) == 0);
 
 
 
-			/*Création archivistes*/
+			/*--- Création archivistes ---*/
 			for (i = 1; i<= nb_archivistes; i ++) {
-
-				cle_fichier = ftok("archiviste.c", 1);
-				assert(cle_fichier != -1);
-				file_mess = msgget(cle_fichier, IPC_CREAT | 0600); //Création file message
-				assert( file_mess != -1);
-			
+				pid = fork ();
+				if (pid == 0) {
+					execl("./archiviste", "./archiviste", buf, NULL);
+				}				
 			}
 
-			/*Création journaliste à l'infini*/
+			/*--- Création des journaliste à l'infini ---*/
 			while (1) {
-				cle_fichier = ftok("journaliste.c", 1);
-				assert(cle_fichier != -1);
-			}
-
-			/*Création de segment, chaque thème, un segment*/
-			for (i = 1; i<= nb_themes; i++) {
-				int seg = shmget(cle_fichier, sizeof(long), IPC_CREAT | 0600);
-			}
-
-			/*Création de sémaphore*/
-			//int sid = semget(cle_fichier,2,0666|IPC_CREAT|IPC_EXCL);
-
-			/*Création */
-
-
+				pid = fork();
+				if (pid == 0) {
+					execl("./journaliste", "./journaliste", buf, NULL);
+				}
+				sleep(5);			
+			}	
 			
 			
 		}
 	}
+
 	
 	return EXIT_SUCCESS;
 }
