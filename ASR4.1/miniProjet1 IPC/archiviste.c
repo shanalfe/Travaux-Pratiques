@@ -9,37 +9,36 @@
 #include "type.h"
 
 
+/*--- Déclaration des variables ---*/
+int msg;
+
 
 int main(int argc, char const *argv[]){
 
+	/*--- Déclaration des variables ---*/
+	key_t msgkey;
+
+	int num_ordre = atoi(argv[1]);	
+	char nb_theme = argv[2];
+	requete_archiviste reponse;
+
+
+	/*--- File de messages ---*/
+	msgKey = ftok(FILE_MSGKEY,'a');
+	msg = msgget (msgKey, IPC_CREAT | 0666);
 
 
 
-	int nb_archiviste = atoi(argv[1]);	
-	char demande = argv[2];
 
-
-
-
-	ssize_t nb_lus;
-	requete_t requete;
-	reponse_t reponse;
-
-
-	/*Attend les requetes*/
+	/*--- Attend les requetes ---*/
 	while (1) {
 		
-		nb_lus = msgrcv(file_mess, &requete, sizeof(requete_t)-sizeof(long), pid, 0);
+		msgrcv(msg, &reponse, sizeof(requete_archiviste)-sizeof(long), pid, 0);
 
-		if (nb_lus != -1) {
-			/* traitement de la requete :                      */
-		//	int result = effectuer(requete.op, requete.g, requete.d);
+		sleep(rand()%3);
 
-			sleep(rand()%3);
-
-			/*Envoi reponse*/
-			//sgsnd(file_mess, &reponse, sizeof(reponse)-sizeof(long), 0);
-		}
+		
+		
 	}
 	
 	return 0;

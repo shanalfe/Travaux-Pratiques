@@ -1,8 +1,10 @@
 
 
 
-
-
+typedef struct {
+	char demande; // Cela peut être consultation(fournir), archivage, effacement
+}
+requete_journaliste;
 
 
 
@@ -12,15 +14,10 @@ typedef enum {
 } bool;
 
 
-
-typedef struct {
-	char demande; // Cela peut être consultation(fournir), archivage, effacement
-}
-requete_t;
-
-
 /*Réponse archiviste s'il a bien fait son travail*/
 typedef struct {
 	bool fait; 
 }
-reponse_t;
+reponse_archiviste;
+
+#endif

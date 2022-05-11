@@ -21,7 +21,7 @@
 
 #include "type.h"
 
-/*Déclaration des variables*/
+/*--- Declaration Des variables ---*/
 int sgmId,
 	semId,
 	msgId;
@@ -43,7 +43,7 @@ void arret(){
 }
 
 
-/*Reception signal arrêter programme*/
+/*--- Reception signal arrêter programme ---*/
 int set_signal_handler(int signo, void (*handler)(int)) {
 	struct sigaction sa;
 	sa.sa_handler = handler;    
@@ -51,6 +51,25 @@ int set_signal_handler(int signo, void (*handler)(int)) {
 	sa.sa_flags = 0 ;          
 	return sigaction(signo, &sa, NULL);
 }
+
+
+/*--- Permet d'initialiser une demande au hasard*/
+char type_demande() {
+
+	int nombre = rand() % 10;
+	char choix;
+
+	if(0 <= nombre && nombre <=6 ) {
+	choix = 'C';
+	} else if(nombre <= 8) {
+	choix = 'P';
+	} else if (nombre == 9) {
+	choix = 'E';
+	}
+
+	return choix;
+} 
+
 
 
 
@@ -79,15 +98,7 @@ int main(int argc, char const *argv[]){
 
 
 		/*pour requete*/
-		int nombre = rand() % 10;
-
-		if(0 <= nombre && nombre <=6 ) {
-		choix = "consultation";
-		} else if(nombre <= 8) {
-		choix = 'archivage';
-		} else if (nombre == 9) {
-		choix = 'effacemement';
-		}
+		char demande = type_demande();
 
 
 		/*--- Conversion en int ---*/
