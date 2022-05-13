@@ -11,13 +11,17 @@
 #include "type.h"
 
 /*--- Déclaration des variables ---*/
-int msgId;	
+int msgId,
+	sgm,
+	sem;	
 
 
 int main(int argc, char const *argv[]){
 
 	/*--- Déclaration des variables ---*/
-	key_t msgKey;
+	key_t msgKey,
+		  semKey,
+		  sgmKey;
 
 	bool verif = false;
 
@@ -25,20 +29,39 @@ int main(int argc, char const *argv[]){
 
 	/*--- Récupération des arguments ---*/
 	int num_ordre = atoi(argv[1]);	
-	char choix = atoi (argv[2]);
+	char choix = argv[2];
+
+
+	/*--- Création file de message ---*/
+	msgKey = ftok("cles/msgkey.serv", 'a');
+	msgId = msgget(msgKey, IPC_CREAT | 0666);
+
+	/*Création sémaphore*/
+	semKey = ftok("cles/semkey.serv", 'a');
+	sem = (semKey, 1, IPC_CREAT | 0666);
+
+	/*Création segment partagé*/
+	sgmKey = ftok("cles/sgm.serv", 'a');
+	sgm = shmget (sgmKey, sizeof(int), IPC_CREAT | 0666)
+
+
+
+	/*--- Création de la requête ---*/
+	requete.demande = choix;
 
 
 	if(choix == 'C' || choix == 'E') {
-		printf("Numéro du thème : ");
-		int numTheme = atoi(argv[1]);
-		printf("Numéro article : ");
-		int numArticle = atoi(argv[2]);
+		printf("Numéro du thème : %s", argv[3]);
+		requete.num_theme = atoi(argv[3]);
+		printf("Numéro article : %sx", argv[4]);
+		requete.num_article = atoi(argv[4]);
+
 		verif = true;
 	} else if (choix == 'P') {
 		printf("Numéro du thème : ");
-		int numTheme = atoi(argv[1]);
+		requete.num_theme = atoi(argv[3]);
 		printf("Texte de l'article : ");
-		char textArticle [3] = atoi(argv[2]);
+		requete.text_article[3]= char(argv[4]);
 		verif = true;
 	} else {
 		verif = false;
@@ -49,18 +72,10 @@ int main(int argc, char const *argv[]){
 	}
 
 
-	/*--- Création file de message ---*/
-	msgKey = ftok("cles/msgkey.serv", 'a');
-	msgId = msgget(msgKey, IPC_CREAT | 0666);
-
-
-
-	/*--- Création de la requête ---*/
-	requete_journaliste.demande = choix;
 
 	/*--- Envoi de la requete ---*/	
-	requete.archiviste = getpid();
-	msgsnd(file_mess, &requete, sizeof(requete_journaliste)-sizeof(long), 0);
+//	requete.archiviste = getpid();
+	msgsnd(msgId, &requete, sizeof(requete_journaliste)-sizeof(long), 0);
 
 	sleep(rand()%3);
 

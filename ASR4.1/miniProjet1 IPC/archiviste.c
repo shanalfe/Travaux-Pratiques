@@ -10,30 +10,43 @@
 
 
 /*--- Déclaration des variables ---*/
-int msg;
+int msg,
+	sgm,
+	sem;
 
 
 int main(int argc, char const *argv[]){
 
 	/*--- Déclaration des variables ---*/
-	key_t msgkey;
+	key_t msgKey,
+		  sgmKey,
+		  semKey;
 
 	int num_ordre = atoi(argv[1]);	
-	char nb_theme = argv[2];
-	requete_archiviste reponse;
+	char nb_theme = atoi(argv[2]);
+	reponse_archiviste reponse;
 
+	reponse.fait = true;
 
 	/*--- File de messages ---*/
-	msgKey = ftok(FILE_MSGKEY,'a');
+	msgKey = ftok("cles/msgkey.serv",'a');
 	msg = msgget (msgKey, IPC_CREAT | 0666);
 
+	/*Segment partagé*/
+	sgmKey = ftok ("cles/sgmkey.serv", 'a');
+	sgm = shgmet(sgmKey, sizeof(int), IPC_CREAT | 0666);
 
+	/*Sémamphore*/
+	semKey = ftok("cles/semkey.serv", 'a');
+	sem = semget(semKey, 1, IPC_CREAT | 0666 );
 
 
 	/*--- Attend les requetes ---*/
 	while (1) {
 		
-		msgrcv(msg, &reponse, sizeof(requete_archiviste)-sizeof(long), pid, 0);
+		msgrcv(msg, &reponse, sizeof(reponse_archiviste)-sizeof(long), reponse.fait, 0);
+
+		reponse.num_ordre = num_ordre + 1;
 
 		sleep(rand()%3);
 

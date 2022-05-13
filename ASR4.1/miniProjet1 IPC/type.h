@@ -3,6 +3,10 @@
 
 typedef struct {
 	char demande; // Cela peut être consultation(fournir), archivage, effacement
+	int num_theme;
+	int num_article;
+	char text_article [3];
+
 }
 requete_journaliste;
 
@@ -20,4 +24,3 @@ typedef struct {
 }
 reponse_archiviste;
 
-#endif
