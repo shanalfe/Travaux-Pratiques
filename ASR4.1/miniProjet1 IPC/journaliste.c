@@ -10,6 +10,9 @@
 
 #include "type.h"
 
+struct sembuf p [] = {{0,-1,0},{1,-1,0}};
+struct sembuf v []  = {{0,+2,0},{1,1,0}};
+
 /*--- Déclaration des variables ---*/
 int msgId,
 	sgm,
@@ -25,7 +28,9 @@ int main(int argc, char const *argv[]){
 
 	bool verif = false;
 
+
 	requete_journaliste requete;
+	reponse_archiviste reponse;
 
 	/*--- Récupération des arguments ---*/
 	int num_ordre = atoi(argv[1]);	
@@ -42,9 +47,9 @@ int main(int argc, char const *argv[]){
 
 	/*Création segment partagé*/
 	sgmKey = ftok("cles/sgm.serv", 'a');
-	sgm = shmget (sgmKey, sizeof(int), IPC_CREAT | 0666)
+	sgm = shmget (sgmKey, sizeof(int), IPC_CREAT | 0666);
 
-
+	semop (sgm, p, 2); //Acquisition des ressources
 
 	/*--- Création de la requête ---*/
 	requete.demande = choix;
@@ -72,6 +77,8 @@ int main(int argc, char const *argv[]){
 	}
 
 
+	semop (sgm, v, 1); // Libération des ressources
+
 
 	/*--- Envoi de la requete ---*/	
 //	requete.archiviste = getpid();
@@ -79,6 +86,15 @@ int main(int argc, char const *argv[]){
 
 	sleep(rand()%3);
 
+
+	if(reponse.fait == true) {
+		char reponseArchiviste []= "ok";
+	} else {
+		char reponseArchiviste []= "Pas ok";
+	}
+
+	/*--- Affiche la requete ---*/
+	printf("Le journaliste %d à recu : %c", getpid(), reponseArchiviste);
 	
 	
 	return 0;

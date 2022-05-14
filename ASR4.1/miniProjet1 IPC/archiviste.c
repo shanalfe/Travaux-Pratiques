@@ -49,8 +49,6 @@ int main(int argc, char const *argv[]){
 		reponse.num_ordre = num_ordre + 1;
 
 		sleep(rand()%3);
-
-		
 		
 	}
 	

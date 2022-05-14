@@ -71,9 +71,6 @@ char type_demande() {
 } 
 
 
-
-
-
 int main(int argc, char const *argv[]){
 
 

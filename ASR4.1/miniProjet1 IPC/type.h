@@ -1,6 +1,3 @@
-
-
-
 typedef struct {
 	char demande; // Cela peut être consultation(fournir), archivage, effacement
 	int num_theme;
@@ -9,7 +6,6 @@ typedef struct {
 
 }
 requete_journaliste;
-
 
 
 typedef enum { 
