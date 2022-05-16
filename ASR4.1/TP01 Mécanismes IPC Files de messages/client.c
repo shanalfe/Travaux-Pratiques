@@ -13,6 +13,7 @@
 #include <signal.h>
 #include <assert.h>
 #include "types.h"
+
 void usage(char *s){
     fprintf(stderr,"Usage : %s gauche op droite\n\tgauche, droite : entiers\n\top = +, -, *, /, \%% \n",s);
     exit(-1);

@@ -1,0 +1,40 @@
+#include <pthread.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+
+
+void * start_routing (void * M) {
+	long * t;
+	t = (long *)M;
+	printf("%ld\n", *t);
+	pthread_exit(NULL);
+
+
+
+}
+
+int main(int argc, char const *argv[]) {
+
+	int N = atoi(argv [1]),
+		M = atoi(argv [2]),
+		i = 0,
+		rc;
+	long *t = {0};
+	pthread_t threads [N];
+
+	for(i=0; i<M; i++){
+		rc = pthread_create(&threads[t], NULL, start_routing, (void *)t);
+	}
+
+	printf("%d, %d\n", N, M);
+	
+
+	if (rc){
+    	printf("ERROR; return code from pthread_create() is %d\n", rc);
+    	exit(-1);
+    }
+  
+
+	return EXIT_SUCCESS;
+}
