@@ -1,6 +1,0 @@
-let cs = document.getElementById('camember').getContext('2d');
-cs.beginPath();
-cs.lineWidth="2";
-cs.arc(100, 100, 90, 0, 2 * Math.PI);
-cs.stroke();
-
