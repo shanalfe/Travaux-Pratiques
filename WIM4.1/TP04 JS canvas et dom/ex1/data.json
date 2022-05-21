@@ -1,0 +1,6 @@
+let data=[
+{"label":"C","value":50},
+{"label":"C++","value":100},
+{"label":"Java","value":20},
+{"label":"PHP","value":60}
+];
