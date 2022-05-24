@@ -1,13 +1,3 @@
-| [ ajax](https://dwarves.iut-fbleau.fr/gitiut/FA2_2021/WIM4/commit/e8a78a57fec8398f7ee30e3f1a0fb8de1a868537) | 2 weeks ago                                                  |             |
-| ------------------------------------------------------------ | ------------------------------------------------------------ | ----------- |
-| [ex2](https://dwarves.iut-fbleau.fr/gitiut/FA2_2021/WIM4/src/branch/master/td_tp/tp3/ex2) | [ajax](https://dwarves.iut-fbleau.fr/gitiut/FA2_2021/WIM4/commit/e8a78a57fec8398f7ee30e3f1a0fb8de1a868537) | 2 weeks ago |
-| [ex3](https://dwarves.iut-fbleau.fr/gitiut/FA2_2021/WIM4/src/branch/master/td_tp/tp3/ex3) | [ajax](https://dwarves.iut-fbleau.fr/gitiut/FA2_2021/WIM4/commit/e8a78a57fec8398f7ee30e3f1a0fb8de1a868537) | 2 weeks ago |
-| [img](https://dwarves.iut-fbleau.fr/gitiut/FA2_2021/WIM4/src/branch/master/td_tp/tp3/img) | [ajax](https://dwarves.iut-fbleau.fr/gitiut/FA2_2021/WIM4/commit/e8a78a57fec8398f7ee30e3f1a0fb8de1a868537) | 2 weeks ago |
-| [README.md](https://dwarves.iut-fbleau.fr/gitiut/FA2_2021/WIM4/src/branch/master/td_tp/tp3/README.md) | [ajax](https://dwarves.iut-fbleau.fr/gitiut/FA2_2021/WIM4/commit/e8a78a57fec8398f7ee30e3f1a0fb8de1a868537) | 2 weeks ago |
-| [aide.md](https://dwarves.iut-fbleau.fr/gitiut/FA2_2021/WIM4/src/branch/master/td_tp/tp3/aide.md) | [ajax](https://dwarves.iut-fbleau.fr/gitiut/FA2_2021/WIM4/commit/e8a78a57fec8398f7ee30e3f1a0fb8de1a868537) | 2 weeks ago |
-
-#### **README.md**
-
 # TP javascript : Ajax, promesses.
 
 Vous disposez tous, à la racine de votre compte, d'un répertoire `public_html` qui est servi (http/https) par le serveur dwarves. Pour accéder à vos pages, utilisez l'url :
