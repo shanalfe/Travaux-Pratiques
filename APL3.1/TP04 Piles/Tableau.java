@@ -2,6 +2,9 @@ public class Tableau<E> implements Pile<E>{
     private E[] tab = null;
 	private E first;
 
+    /**
+     * @param element
+     */
     public Tableau(E element){
         this.tab = new E[1];
     }
