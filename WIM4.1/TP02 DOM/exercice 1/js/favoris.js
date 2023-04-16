@@ -32,6 +32,11 @@ window.addEventListener("load",()=>{
 		let a = document.createElement("a")
 		a.href="https://"+f.url
 		let txt = document.createTextNode(f.nom)
+		/* pour les images :
+		let img = document.createElement("img")
+		img.src = f.img
+		ul.appendChild(img)
+		*/	
 		/*Assignation du dernier enfant à tel élément*/
 		a.appendChild(txt)
 		li.appendChild(a)
